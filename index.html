@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+
+  <title>The Daily Watchlist | US Pre-Market Research Brief</title>
+  <meta name="description" content="Review structured US pre-market research at 9:00 AM ET, including public catalysts, balanced bull and bear perspectives, key risks, and educational market context." />
+  <link rel="canonical" href="https://thedailywatchlist.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Daily Watchlist | US Pre-Market Research Brief" />
+  <meta property="og:description" content="Structured US pre-market research at 9:00 AM ET. Public catalysts, bull and bear analysis, key risks. Educational only." />
+  <meta property="og:url" content="https://thedailywatchlist.com/" />
+  <meta property="og:site_name" content="The Daily Watchlist" />
+  <meta property="og:image" content="https://thedailywatchlist.com/og-image.webp" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Daily Watchlist | US Pre-Market Research Brief" />
+  <meta name="twitter:description" content="Structured US pre-market research at 9:00 AM ET. Educational only." />
+  <meta name="twitter:image" content="https://thedailywatchlist.com/og-image.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%231E3A5F'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='26' fill='%23F59E0B'>DW</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nothing. No card, no trial, no paid tier hidden behind the free brief today." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this investment advice?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. It is general educational content, not personalised investment advice." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you guarantee returns?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. No price targets, no predictions, no accuracy claims." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── RESET ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img, video { max-width: 100%; height: auto; display: block; }
+
+    /* ─── DESIGN TOKENS ──────────────────────────────── */
+    :root {
+      --bg:          #FFFFFF;
+      --surface:     #FFFFFF;
+      --alt:         #EFF4FB;
+      --text:        #172033;
+      --text-2:      #5D6678;
+      --text-3:      #94A3B8;
+      --border:      #E2E8F0;
+      --blue:        #2563EB;
+      --blue-dark:   #1E3A5F;
+      --blue-light:  #EFF6FF;
+      --amber:       #B45309;
+      --amber-light: #FEF3C7;
+      --bull:        #16834A;
+      --bull-light:  #DCFCE7;
+      --bear:        #C43D3D;
+      --bear-light:  #FEE2E2;
+      --wa:          #25D366;
+      --wa-dark:     #128C7E;
+
+      --radius-sm:   6px;
+      --radius:      12px;
+      --radius-lg:   18px;
+      --radius-xl:   24px;
+
+      --shadow-sm:   0 1px 3px rgba(23,32,51,0.08), 0 1px 2px rgba(23,32,51,0.04);
+      --shadow:      0 4px 16px rgba(23,32,51,0.08), 0 2px 4px rgba(23,32,51,0.04);
+      --shadow-lg:   0 12px 40px rgba(23,32,51,0.10), 0 4px 8px rgba(23,32,51,0.04);
+    }
+
+    /* ─── BASE ───────────────────────────────────────── */
+    html { scroll-behavior: smooth; background: #FFFFFF; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text); background: #FFFFFF; line-height: 1.65;
+      overflow-x: hidden; -webkit-font-smoothing: antialiased;
+      padding-top: 64px; /* fixed nav height — pushes all content below the nav */
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    h1,h2,h3 { font-family: 'Lora', serif; }
+    a { color: inherit; }
+
+    /* ─── LAYOUT ─────────────────────────────────────── */
+    .container {
+      max-width: 1200px; margin: 0 auto; padding: 0 5%;
+    }
+    section { position: relative; }
+    .section-pad { padding: 56px 0; }
+    .section-pad-sm { padding: 36px 0; }
+
+
+    /* ─── SCROLL REVEAL ──────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+    /* ─── EYEBROW ────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+      color: var(--blue); background: var(--blue-light); border: 1px solid rgba(37,99,235,0.18);
+      padding: 5px 12px; border-radius: 100px; margin-bottom: 16px;
+    }
+    .eyebrow .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
+    .eyebrow.centered { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
+    .eyebrow.amber { color: var(--amber); background: var(--amber-light); border-color: rgba(180,83,9,0.2); }
+    .eyebrow.amber .dot { background: var(--amber); }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────────── */
+    .section-title {
+      font-family: 'Lora', serif; font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: 12px;
+    }
+    .section-sub { font-size: 1rem; color: var(--text-2); max-width: 600px; line-height: 1.75; }
+    .centered { text-align: center; margin-left: auto; margin-right: auto; }
+
+    /* ─── CARD ───────────────────────────────────────── */
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow);
+    }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+    /* ─── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none; transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--blue); color: #fff; box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,99,235,0.38); }
+    .btn-wa {
+      background: var(--wa); color: #fff; box-shadow: 0 4px 14px rgba(37,211,102,0.3);
+    }
+    .btn-wa:hover { background: var(--wa-dark); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,211,102,0.38); }
+    .btn-wa-lg {
+      background: var(--wa); color: #fff; box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+      padding: 15px 32px; font-size: 1rem; border-radius: var(--radius);
+    }
+    .btn-wa-lg:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,0.42); }
+    .btn-outline {
+      background: transparent; color: var(--text); border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+    .btn-sm { padding: 8px 16px; font-size: 0.82rem; }
+
+    /* WA icon svg helper */
+    .wa-icon { width: 18px; height: 18px; flex-shrink: 0; }
+    .wa-icon-sm { width: 15px; height: 15px; flex-shrink: 0; }
+
+    @media (max-width: 480px) {
+      .section-pad { padding: 40px 0; }
+      .section-pad-sm { padding: 28px 0; }
+      .btn-sm-mobile { padding: 8px 14px; font-size: 0.8rem; }
+    }
+
+    /* ─── TICKER TAPE ─────────────────────────────────── */
+    .ticker-outer {
+      background: var(--blue-dark); border-bottom: 1px solid rgba(255,255,255,0.12);
+      overflow: hidden;
+    }
+    .ticker-status-bar-wrap {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .ticker-status-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1200px; margin: 0 auto; padding: 4px 5%;
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.72);
+    }
+    .ticker-status-indicator { display: flex; align-items: center; gap: 5px; }
+    .ticker-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+      animation: blink-green 2s ease-in-out infinite;
+    }
+    .ticker-dot.closed { background: #fbbf24; animation: none; }
+    .ticker-dot.demo { background: #cbd5e1; animation: none; }
+    @keyframes blink-green { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .ticker-scroll { overflow: hidden; padding: 8px 0; }
+    .ticker-track {
+      display: flex; width: max-content;
+      animation: ticker-move 38s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    @keyframes ticker-move { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: 6px; padding: 0 18px;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; white-space: nowrap;
+      border-right: 1px solid rgba(255,255,255,0.14);
+    }
+    .t-sym { font-weight: 700; color: #fff; }
+    .t-px  { color: rgba(255,255,255,0.78); font-size: 0.72rem; }
+    .t-chg { font-weight: 700; font-size: 0.72rem; }
+    .t-chg.up   { color: #86efac; }
+    .t-chg.down { color: #fca5a5; }
+    .t-chg .arr { font-size: 0.65rem; }
+    .ticker-disclaimer {
+      text-align: center; font-size: 0.6rem; color: rgba(255,255,255,0.55);
+      padding: 2px 5% 4px; letter-spacing: 0.3px;
+    }
+
+    /* ─── HERO ───────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 70%);
+      padding: 60px 0; min-height: calc(100vh - 64px);
+      display: flex; align-items: center;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px;
+      align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 5%; width: 100%;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--blue);
+    }
+    .hero-label span { display: inline-block; width: 5px; height: 5px; background: var(--blue); border-radius: 50%; animation: blink-green 2s ease-in-out infinite; }
+    .hero h1 {
+      font-family: 'Lora', serif; font-size: clamp(2.1rem, 4vw, 3.2rem);
+      font-weight: 700; line-height: 1.18; color: var(--text); margin-bottom: 20px;
+    }
+    .hero h1 em { font-style: italic; color: var(--blue); }
+    .hero-sub { font-size: 1rem; color: var(--text-2); margin-bottom: 28px; max-width: 480px; line-height: 1.7; }
+
+    .hero-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; max-width: 460px; }
+    .hero-bullets li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.92rem; color: var(--text-2); line-height: 1.5;
+    }
+    .hb-dot {
+      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
+      background: var(--blue-light); display: flex; align-items: center; justify-content: center;
+    }
+    .hb-dot svg { width: 10px; height: 10px; color: var(--blue); }
+
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .btn-wa { padding: 12px 24px; }
+    .hero-disclaimer {
+      font-size: 0.71rem; color: var(--text-3); line-height: 1.6;
+      padding-top: 14px; border-top: 1px solid var(--border); max-width: 440px;
+    }
+    .hero-disclaimer a { color: var(--blue); text-underline-offset: 2px; }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero { padding: 36px 0 32px; min-height: auto; }
+    }
+
+    /* Research card in hero */
+    .research-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .rc-header {
+      background: var(--blue-dark); padding: 14px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .rc-brand { font-family: 'Lora', serif; font-size: 0.88rem; font-weight: 700; color: #fff; }
+    .rc-meta { font-size: 0.65rem; color: rgba(255,255,255,0.55); font-family: 'JetBrains Mono', monospace; }
+    .rc-tag {
+      display: inline-flex; align-items: center; gap: 4px; font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
+      border: 1px solid rgba(37,211,102,0.4); color: #4ade80; background: rgba(37,211,102,0.1);
+    }
+    .rc-body { padding: 16px 20px; }
+    .rc-stock-row {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    }
+    .rc-stock-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rc-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.88rem; color: var(--text); flex: 1; }
+    .rc-sector { font-size: 0.65rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.6px; }
+    .rc-chg { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+    .rc-chg.up   { color: var(--bull); background: var(--bull-light); }
+    .rc-chg.down { color: var(--bear); background: var(--bear-light); }
+    .rc-catalyst { font-size: 0.75rem; color: var(--text-2); margin-bottom: 6px; line-height: 1.5; }
+    .rc-analysis { display: flex; flex-direction: column; gap: 3px; }
+    .rc-side { font-size: 0.72rem; padding: 4px 8px; border-radius: 6px; }
+    .rc-side.bull { background: var(--bull-light); color: var(--bull); }
+    .rc-side.bull strong { font-weight: 700; }
+    .rc-side.bear { background: var(--bear-light); color: var(--bear); }
+    .rc-side.bear strong { font-weight: 700; }
+    .rc-gate {
+      margin: 12px 20px 16px; padding: 12px 16px; border: 1.5px dashed var(--border);
+      border-radius: var(--radius); text-align: center; font-size: 0.78rem; color: var(--text-2);
+      background: var(--alt);
+    }
+    .rc-gate strong { color: var(--blue); font-weight: 600; }
+    .rc-edu { font-size: 0.62rem; color: var(--text-3); text-align: center; padding: 6px 20px 14px; }
+
+    /* ─── TRUST STRIP ─────────────────────────────────── */
+    .trust-strip {
+      background: var(--blue-dark); padding: 16px 0;
+    }
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 8px 16px; max-width: 1200px; margin: 0 auto; padding: 0 5%; align-items: center;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.72);
+      justify-content: center; text-align: center;
+    }
+    .trust-item svg { width: 14px; height: 14px; color: var(--wa); flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .trust-grid { grid-template-columns: repeat(2,1fr); gap: 10px 12px; }
+      .trust-item { font-size: 0.73rem; justify-content: flex-start; text-align: left; }
+    }
+
+    /* ─── BRIEF PREVIEW ──────────────────────────────── */
+    .brief-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 40px; }
+    .brief-card { padding: 22px; position: relative; }
+    .brief-card-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+    .brief-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--text); }
+    .brief-co-name { font-size: 0.72rem; color: var(--text-3); margin-top: 1px; }
+    .brief-sector { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-3); }
+    .brief-chg { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; flex-shrink: 0; }
+    .brief-chg.up   { color: var(--bull); background: var(--bull-light); }
+    .brief-chg.down { color: var(--bear); background: var(--bear-light); }
+    .brief-catalyst { font-size: 0.83rem; color: var(--text-2); margin-bottom: 12px; line-height: 1.55; }
+    .brief-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .brief-pill { font-size: 0.65rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; border: 1px solid; letter-spacing: 0.5px; text-transform: uppercase; }
+    .pill-bull  { color: var(--bull); border-color: rgba(22,131,74,0.25); background: var(--bull-light); }
+    .pill-bear  { color: var(--bear); border-color: rgba(196,61,61,0.25); background: var(--bear-light); }
+    .pill-risk  { color: var(--amber); border-color: rgba(180,83,9,0.25); background: var(--amber-light); }
+    /* Locked card */
+    .brief-lock-overlay {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px; border-radius: var(--radius-lg); z-index: 2;
+      background: rgba(248,250,252,0.85); backdrop-filter: blur(4px);
+    }
+    .brief-lock-overlay svg { color: var(--blue); }
+    .brief-lock-overlay span { font-size: 0.8rem; font-weight: 600; color: var(--blue); }
+    .brief-gate {
+      margin-top: 36px; padding: 24px 28px; background: var(--blue-light);
+      border: 1.5px dashed rgba(37,99,235,0.3); border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px;
+    }
+    .brief-gate p { font-size: 0.92rem; color: var(--text-2); max-width: 460px; }
+    .brief-gate strong { color: var(--text); }
+    @media (max-width: 860px) { .brief-grid { grid-template-columns: 1fr; } }
+
+    /* ─── BULL VS BEAR ────────────────────────────────── */
+    .bb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+    .bb-card { padding: 28px; border-radius: var(--radius-lg); border: 1.5px solid; }
+    .bb-card.bull { background: var(--bull-light); border-color: rgba(22,131,74,0.25); }
+    .bb-card.bear { background: var(--bear-light); border-color: rgba(196,61,61,0.25); }
+    .bb-label {
+      display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.88rem;
+      margin-bottom: 16px;
+    }
+    .bb-card.bull .bb-label { color: var(--bull); }
+    .bb-card.bear .bb-label { color: var(--bear); }
+    .bb-label svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .bb-items { display: flex; flex-direction: column; gap: 10px; }
+    .bb-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.86rem; color: var(--text-2); line-height: 1.5; }
+    .bb-item svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; }
+    .bb-card.bull .bb-item svg { color: var(--bull); }
+    .bb-card.bear .bb-item svg { color: var(--bear); }
+    .bb-caption { margin-top: 24px; padding: 14px 16px; background: rgba(255,255,255,0.7); border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--text-2); text-align: center; line-height: 1.6; border: 1px solid rgba(0,0,0,0.06); }
+    @media (max-width: 640px) { .bb-grid { grid-template-columns: 1fr; } }
+
+    /* ─── HOW IT WORKS ───────────────────────────────── */
+    .hiw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 48px; }
+    .hiw-steps { display: flex; flex-direction: column; }
+    .hiw-step {
+      display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .hiw-step:last-child { border-bottom: none; }
+    .hiw-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 700;
+      color: var(--blue); opacity: 0.22; flex-shrink: 0; width: 44px; text-align: right;
+      line-height: 1; padding-top: 3px; transition: opacity 0.25s;
+    }
+    .hiw-step:hover .hiw-num { opacity: 0.85; }
+    .hiw-body h4 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .hiw-body p { font-size: 0.86rem; color: var(--text-2); line-height: 1.65; }
+
+    /* Message mockup */
+    /* ─── WhatsApp-style mockup ──────────────────────── */
+    .msg-mockup {
+      border-radius: var(--radius-xl); overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.22); max-width: 300px; margin: 0 auto;
+      position: sticky; top: 84px; background: #fff;
+    }
+    /* WA header — green bar */
+    .msg-header {
+      background: #075E54; padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .msg-avatar {
+      width: 32px; height: 32px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Lora', serif; font-weight: 700; font-size: 0.72rem; color: #fff; flex-shrink: 0;
+    }
+    .msg-name { font-weight: 700; font-size: 0.8rem; color: #fff; }
+    .msg-status { font-size: 0.58rem; color: rgba(255,255,255,0.65); margin-top: 1px; }
+    /* WA chat wallpaper */
+    .msg-body {
+      padding: 10px 10px 8px; display: flex; flex-direction: column; gap: 6px;
+      background: #E5DDD5 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b2bbb5' fill-opacity='0.12'%3E%3Cpath d='M30 30c0-11 9-20 20-20v2c-9.9 0-18 8.1-18 18s8.1 18 18 18v2c-11 0-20-9-20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .msg-time-chip {
+      font-size: 0.56rem; color: rgba(0,0,0,0.45); text-align: center;
+      background: rgba(255,255,255,0.75); border-radius: 100px; padding: 2px 9px;
+      margin: 0 auto; width: fit-content;
+    }
+    /* Chat bubble — white card, left-aligned (incoming) */
+    .msg-bubble {
+      background: #fff; border-radius: 10px;
+      padding: 8px 10px; font-size: 0.67rem; line-height: 1.6;
+      color: #111; max-width: 240px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    }
+    .msg-bubble .mb-head { font-weight: 700; color: #075E54; margin-bottom: 5px; font-size: 0.68rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px; }
+    .msg-bubble .mb-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #111; font-size: 0.78rem; }
+    .msg-bubble .mb-chg { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700; }
+    .msg-bubble .mb-chg.pos { color: #16a34a; }
+    .msg-bubble .mb-chg.neg { color: #dc2626; }
+    .msg-bubble .mb-bull { color: #16a34a; margin-top: 5px; }
+    .msg-bubble .mb-bear { color: #dc2626; margin-top: 2px; }
+    .msg-bubble .mb-risk { color: #b45309; margin-top: 2px; font-size: 0.63rem; }
+    .msg-bubble .mb-divider { border: none; border-top: 1px solid #f0f0f0; margin: 5px 0; }
+    .msg-bubble .mb-edu { margin-top: 5px; font-size: 0.59rem; color: #999; }
+    .msg-time { font-size: 0.55rem; color: #999; text-align: right; margin-top: 3px; }
+    /* WA footer bar (input bar) */
+    .msg-footer { background: #f0f0f0; padding: 8px 12px; display: flex; align-items: center; gap: 8px; border-top: 1px solid #ddd; }
+    .msg-footer-input { flex: 1; background: #fff; border-radius: 20px; padding: 5px 10px; font-size: 0.6rem; color: #aaa; border: none; }
+    .msg-footer-mic { width: 28px; height: 28px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .msg-footer-mic svg { width: 13px; height: 13px; color: #fff; }
+
+    @media (max-width: 860px) { .hiw-grid { grid-template-columns: 1fr; } .msg-mockup { display: none; } }
+
+
+
+    /* ─── SCOREBOARD ─────────────────────────────────── */
+    .sb-wrap { overflow: hidden; }
+    .sb-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .sb-table { width: 100%; min-width: 640px; }
+    .sb-head, .sb-row {
+      display: grid; grid-template-columns: 92px 1.1fr 100px 108px 108px 96px;
+      gap: 10px; padding: 13px 22px; align-items: center;
+    }
+    .sb-head {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px;
+      color: #5B6B82; background: #F1F5FB; border-bottom: 1px solid #D7E0EC;
+    }
+    .sb-row {
+      font-size: 0.84rem; color: var(--text-2);
+      border-bottom: 1px solid #E8EEF6; background: #fff;
+      transition: background 0.15s;
+    }
+    .sb-row:nth-child(even) { background: #F8FAFD; }
+    .sb-row:last-child { border-bottom: none; }
+    .sb-row:hover { background: #EEF4FF; }
+    .sb-tick {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 58px; padding: 4px 8px; border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.8rem;
+      color: var(--blue-dark); background: #E8F0FE; border: 1px solid #D0DFFA;
+    }
+    .sb-date, .sb-price { font-size: 0.82rem; color: #4A5A70; }
+    .sb-price { font-family: 'JetBrains Mono', monospace; }
+    .sb-up, .sb-down {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 64px; padding: 3px 8px; border-radius: 100px;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.78rem;
+    }
+    .sb-up   { color: #0F6B3A; background: #DCFCE7; }
+    .sb-down { color: #B42318; background: #FEE4E2; }
+    .sb-muted { color: #8A97A8; font-style: italic; font-size: 0.78rem; }
+    .sb-badge { display: inline-flex; align-items: center; font-size: 0.68rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; border: 1px solid; }
+    .sb-badge.tracked { color: #0F6B3A; border-color: rgba(15,107,58,0.22); background: #DCFCE7; }
+    .sb-badge.moved-lower { color: #B42318; border-color: rgba(180,35,24,0.22); background: #FEE4E2; }
+    .sb-badge.pending  { color: #35507A; border-color: rgba(53,80,122,0.2); background: #E8F0FE; }
+    .sb-badge.illus    { color: var(--amber); border-color: rgba(180,83,9,0.25); background: var(--amber-light); }
+    .sb-note { margin-top: 16px; font-size: 0.76rem; color: var(--text-3); line-height: 1.7; text-align: center; }
+
+    /* Scoreboard dark section + light table panel */
+    #scoreboard { background: var(--blue-dark); }
+    #scoreboard .section-title { color: #fff; }
+    #scoreboard .section-sub { color: rgba(255,255,255,0.78); }
+    #scoreboard .eyebrow { color: rgba(255,255,255,0.72); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.1); }
+    #scoreboard .eyebrow .dot { background: rgba(255,255,255,0.65); }
+    #scoreboard p[style] { color: rgba(255,255,255,0.58) !important; }
+    #scoreboard .card {
+      background: #FFFFFF; border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28); border-radius: 16px;
+    }
+    #scoreboard .sb-note { color: rgba(255,255,255,0.62); }
+
+    /* ─── SECTORS ────────────────────────────────────── */
+    .sectors-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+    .sector-card { padding: 24px; transition: transform 0.2s, box-shadow 0.2s; }
+    .sector-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .sector-icon {
+      width: 44px; height: 44px; border-radius: 10px; background: var(--blue-light);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+    }
+    .sector-icon svg { width: 20px; height: 20px; color: var(--blue); }
+    .sector-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+    .sector-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.55; }
+    .sector-tickers { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+    .sector-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 700;
+      color: var(--text-2); background: var(--alt); border: 1px solid var(--border);
+      padding: 2px 7px; border-radius: 4px;
+    }
+    @media (max-width: 860px) { .sectors-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 520px)  { .sectors-grid { grid-template-columns: 1fr; } }
+
+    /* ─── EDUCATION ──────────────────────────────────── */
+    .edu-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 40px; }
+    .edu-card { padding: 24px; }
+    .edu-icon {
+      width: 42px; height: 42px; border-radius: 10px; background: var(--blue-light);
+      color: var(--blue); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+    }
+    .edu-icon svg { width: 20px; height: 20px; }
+    .edu-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .edu-card p  { font-size: 0.84rem; color: var(--text-2); line-height: 1.65; }
+    @media (max-width: 800px) { .edu-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px)  { .edu-grid { grid-template-columns: 1fr; } }
+
+    /* ─── FINAL CTA ──────────────────────────────────── */
+    .final-cta {
+      background: linear-gradient(135deg, var(--blue-dark) 0%, #0f2440 100%);
+      padding: 88px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .final-cta::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .final-cta-inner { max-width: 620px; margin: 0 auto; position: relative; z-index: 1; }
+    .final-cta h2 { font-family: 'Lora', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+    .final-cta p { font-size: 0.96rem; color: rgba(255,255,255,0.62); line-height: 1.75; margin-bottom: 36px; }
+    .cta-reassurance { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+    .cta-reassurance span { display: flex; align-items: center; gap: 5px; font-size: 0.78rem; color: rgba(255,255,255,0.48); }
+    .cta-reassurance svg { width: 13px; height: 13px; color: rgba(37,211,102,0.7); }
+
+    /* ─── FAQ ────────────────────────────────────────── */
+    .faq-list { max-width: 740px; margin: 40px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 17px 0; cursor: pointer; font-size: 0.94rem; font-weight: 600;
+      font-family: inherit; color: var(--text); transition: color 0.15s; gap: 12px;
+      background: none; border: none; width: 100%; text-align: left;
+    }
+    .faq-q:hover { color: var(--blue); }
+    .faq-q:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 3px; }
+    .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.28s; color: var(--text-3); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; font-size: 0.88rem; color: var(--text-2); line-height: 1.75; transition: max-height 0.32s ease, padding 0.22s; }
+    .faq-item.open .faq-a { max-height: 500px; padding-bottom: 16px; }
+    .faq-a a { color: var(--blue); text-underline-offset: 2px; }
+
+    /* ─── DISCLOSURE ─────────────────────────────────── */
+    .disc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; max-width: 1060px; margin-left: auto; margin-right: auto; }
+    .disc-item { padding: 18px 20px; }
+    .disc-q { font-size: 0.82rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .disc-a { font-size: 0.8rem; color: var(--text-2); line-height: 1.7; }
+    .disc-a a { color: var(--blue); text-underline-offset: 2px; }
+    .disc-full { grid-column: 1 / -1; border: 1.5px solid rgba(180,83,9,0.2) !important; }
+    /* .disc-verify removed */
+    @media (max-width: 640px) { .disc-grid { grid-template-columns: 1fr; } .disc-full { grid-column: 1; } }
+
+    /* ─── UTILITIES ──────────────────────────────────── */
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    .text-bull { color: var(--bull); }
+    .text-bear { color: var(--bear); }
+    .sr-only { position: absolute; left: -9999px; }
+  </style>
+
+  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260804-2">
+  <script src="assets/whatsapp-popup.js?v=20260804-2" defer></script>
+  <script src="https://www.chatfromforms.com/form-embed.js?v=0.1" defer></script>
+</head>
+<body>
+
+<!-- Global nav injected by components.js -->
+<div id="g-nav"></div>
+
+<!-- ─── TICKER TAPE ─────────────────────────────────── -->
+<div class="ticker-outer" role="complementary" aria-label="Reference market data strip">
+  <div class="ticker-status-bar-wrap">
+  <div class="ticker-status-bar">
+    <div class="ticker-status-indicator">
+      <span class="ticker-dot" id="tickerDot" role="img" aria-label="Market data status"></span>
+      <span id="tickerStatus">Loading market data…</span>
+    </div>
+    <span id="tickerUpdateTime"></span>
+  </div>
+  </div>
+  <div class="ticker-scroll">
+    <div class="ticker-track" id="tickerTrack" aria-hidden="true">
+      <!-- Items injected by JS; fallback below if JS disabled -->
+      <div class="ticker-item"><span class="t-sym">AAPL</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">MSFT</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">NVDA</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">AMZN</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">GOOGL</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">META</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">JPM</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">V</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">XOM</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">WMT</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">UNH</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">DIS</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">KO</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">AMD</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+      <div class="ticker-item"><span class="t-sym">TSLA</span><span class="t-px">—</span><span class="t-chg">—</span></div>
+    </div>
+  </div>
+  <p class="ticker-disclaimer">Reference data via Finnhub · Prices shown for context only</p>
+</div>
+
+<!-- ─── HERO ──────────────────────────────────────────── -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-grid">
+
+    <!-- Left -->
+    <div>
+      <div class="hero-label">
+        <span aria-hidden="true"></span>
+        Daily US Pre-Market Research
+      </div>
+
+      <h1 id="hero-h1">
+        Know which US stocks are moving<br>
+        before the open.<br>
+        <em>Here's why.</em>
+      </h1>
+
+      <p class="hero-sub">Before the NYSE opens each morning, two or three US stocks with notable pre-market movement appear in the group: the public catalyst, the case for the move, and the case against it.</p>
+
+      <ul class="hero-bullets" aria-label="What the brief includes">
+        <li>
+          <span class="hb-dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          2–3 US stocks with pre-market movement and a verified public catalyst
+        </li>
+        <li>
+          <span class="hb-dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Bull case and bear case, both sides of every idea, every time
+        </li>
+        <li>
+          <span class="hb-dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          A public research log tracking every brief, positive and negative outcomes
+        </li>
+        <li>
+          <span class="hb-dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          No tips, no deposits, no credit card required
+        </li>
+      </ul>
+
+      <div class="hero-ctas">
+        <button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"
+        onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp"> 
+          <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
+        </button>
+        <a href="#watchlist" class="btn btn-outline">Preview Today's Brief</a>
+      </div>
+
+      <p class="hero-disclaimer">
+        Educational content only. Not investment advice. No price targets, no trade signals, no guarantees about outcomes.
+        <a href="#disclosure">Full disclosure ↓</a>
+      </p>
+    </div>
+
+    <!-- Right: research card -->
+    <div>
+      <div class="research-card" aria-label="Sample research brief preview">
+        <div class="rc-header">
+          <div>
+            <div class="rc-brand">The Daily Watchlist</div>
+            <div class="rc-meta">Morning Brief · <span id="cardDate">Sample · 9:00 AM ET</span></div>
+          </div>
+          <span class="rc-tag">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+            Educational Only
+          </span>
+        </div>
+
+        <div class="rc-body" id="ideasList">
+          <!-- Stock 1 -->
+          <div class="rc-stock-row">
+            <div style="flex:1">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                <span class="rc-ticker">NVDA</span>
+                <span class="rc-chg up">+3.2%</span>
+              </div>
+              <div class="rc-sector">Semiconductors · Pre-market movement</div>
+            </div>
+          </div>
+          <div class="rc-catalyst">Catalyst: Blackwell GPU backlog guidance raised in recent sessions.</div>
+          <div class="rc-analysis">
+            <div class="rc-side bull"><strong>Bull:</strong> Hyperscaler capex still accelerating; backlog extends well into 2027.</div>
+            <div class="rc-side bear"><strong>Bear:</strong> Valuation already prices near-perfect execution; guidance miss would be material.</div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid var(--border);margin:12px 0;" />
+
+          <!-- Stock 2 (partial) -->
+          <div class="rc-stock-row">
+            <div style="flex:1">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                <span class="rc-ticker">UNH</span>
+                <span class="rc-chg down">−1.8%</span>
+              </div>
+              <div class="rc-sector">Healthcare · Pre-market movement</div>
+            </div>
+          </div>
+          <div class="rc-catalyst">Catalyst: Medical loss ratio concerns; guidance revision risk flagged.</div>
+          <div class="rc-analysis">
+            <div class="rc-side bull"><strong>Bull:</strong> Pressure may already be priced in at current levels…</div>
+          </div>
+        </div>
+
+        <div class="rc-gate">
+          <strong>Full brief + company #3</strong> delivered to the WhatsApp group at 9:00 AM ET every trading day.
+        </div>
+        <p class="rc-edu">Sample format · Prices are illustrative</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── TRUST STRIP ───────────────────────────────────── -->
+<div class="trust-strip" aria-label="Key facts">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Delivered at 9:00 AM ET · Mon–Fri
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      2–3 US stocks · Verified public catalysts
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      No deposits · No credit card
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Public research log · All outcomes tracked
+    </div>
+  </div>
+</div>
+
+<!-- ─── BRIEF PREVIEW ─────────────────────────────────── -->
+<section id="watchlist" class="section-pad" aria-labelledby="watchlist-h2">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Today's Brief Preview</div>
+    <h2 id="watchlist-h2" class="section-title reveal">What you read before the open.</h2>
+    <p class="section-sub reveal">A short pre-market note on the names with real movement. Enough context to form a view before the bell, without tip-sheet language or trade instructions.</p>
+
+    <div class="brief-grid">
+      <!-- Card 1 -->
+      <div class="card card-hover reveal" style="padding:0;overflow:hidden;">
+        <div style="background:var(--blue-dark);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="brief-ticker" style="color:#fff;font-size:1rem;">NVDA</span>
+            <span class="brief-chg up">+3.2%</span>
+          </div>
+          <span class="brief-sector" style="color:rgba(255,255,255,0.45);">Semiconductors</span>
+        </div>
+        <div style="padding:18px;">
+          <p class="brief-catalyst">Blackwell GPU demand is the catalyst. The brief covers the case for the move and the case against it on the same stock.</p>
+          <div class="brief-pills">
+            <span class="brief-pill pill-bull">Bull case included</span>
+            <span class="brief-pill pill-bear">Bear case included</span>
+            <span class="brief-pill pill-risk">Key risk: margin compression</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card card-hover reveal" style="padding:0;overflow:hidden;">
+        <div style="background:var(--blue-dark);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="brief-ticker" style="color:#fff;font-size:1rem;">UNH</span>
+            <span class="brief-chg down">−1.8%</span>
+          </div>
+          <span class="brief-sector" style="color:rgba(255,255,255,0.45);">Healthcare</span>
+        </div>
+        <div style="padding:18px;">
+          <p class="brief-catalyst">Medical loss ratio concerns are the catalyst. The brief asks whether the market has already priced the pressure in.</p>
+          <div class="brief-pills">
+            <span class="brief-pill pill-bull">Bull case included</span>
+            <span class="brief-pill pill-bear">Bear case included</span>
+            <span class="brief-pill pill-risk">Key risk: regulatory exposure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — locked -->
+      <div class="card reveal" style="padding:0;overflow:hidden;position:relative;">
+        <div class="brief-lock-overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Join to see Company #3</span>
+        </div>
+        <div style="background:var(--blue-dark);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;filter:blur(2px);">
+          <span class="brief-ticker" style="color:#fff;font-size:1rem;">???</span>
+          <span class="brief-sector" style="color:rgba(255,255,255,0.45);">Consumer</span>
+        </div>
+        <div style="padding:18px;filter:blur(2px);">
+          <p class="brief-catalyst">A consumer name with a notable catalyst today. Full analysis inside the group.</p>
+          <div class="brief-pills">
+            <span class="brief-pill pill-bull">Bull case included</span>
+            <span class="brief-pill pill-bear">Bear case included</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brief-gate reveal">
+      <p>The complete brief on all three names is published in the group at 9:00 AM ET every trading day.</p>
+      <button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"
+      onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp"> 
+        <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ──────────────────────────────────── -->
+<section id="how-it-works" class="section-pad" aria-labelledby="hiw-h2">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>The Process</div>
+    <h2 id="hiw-h2" class="section-title reveal">How a name gets into the brief.</h2>
+    <p class="section-sub reveal">Nothing is added on gut feel. A name has to clear the screen, show a public catalyst, and carry both sides of the argument before it goes out.</p>
+
+    <div class="hiw-grid">
+      <!-- Steps -->
+      <div class="hiw-steps reveal">
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">01</div>
+          <div class="hiw-body">
+            <h4>The screen runs before 9:00 AM ET</h4>
+            <p>Identifies US-listed stocks with notable pre-market movement and a confirmed public catalyst such as earnings, guidance, an FDA decision, or major company news. No confirmed catalyst: the idea does not advance.</p>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">02</div>
+          <div class="hiw-body">
+            <h4>Both sides are written up</h4>
+            <p>The upside argument and the downside risk are written for every name. No idea publishes with only one side. The risk case is mandatory, not optional.</p>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">03</div>
+          <div class="hiw-body">
+            <h4>Published at 9:00 AM ET</h4>
+            <p>The brief is in the group at 9:00 AM ET, 30 minutes before the NYSE opens at 9:30. Ticker, catalyst, both sides, key risk.</p>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num" aria-hidden="true">04</div>
+          <div class="hiw-body">
+            <h4>Every idea goes on the public research log</h4>
+            <p>Reference price at publication, subsequent price, and S&amp;P 500 comparison. Positive and negative outcomes stay on record.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup -->
+      <div class="hiw-visual reveal" aria-hidden="true">
+        <div class="msg-mockup">
+          <!-- WA-style green header -->
+          <div class="msg-header">
+            <div class="msg-avatar">DW</div>
+            <div>
+              <div class="msg-name">The Daily Watchlist</div>
+              <div class="msg-status">1,284 members · 9:00 AM ET daily</div>
+            </div>
+          </div>
+          <!-- WA wallpaper chat area -->
+          <div class="msg-body">
+            <div class="msg-time-chip">Today · 9:00 AM ET</div>
+            <!-- NVDA bubble -->
+            <div class="msg-bubble">
+              <div class="mb-head">📋 Morning Brief · Aug 3, 2026</div>
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                <span class="mb-ticker">NVDA</span>
+                <span class="mb-chg pos">▲ +3.2%</span>
+              </div>
+              <div style="font-size:0.62rem;color:#555;margin-bottom:4px;">Semiconductors · Pre-market</div>
+              <div class="mb-bull">🟢 <strong>Bull:</strong> Blackwell GPU backlog; hyperscaler capex rising.</div>
+              <div class="mb-bear">🔴 <strong>Bear:</strong> Valuation prices in near-perfect execution.</div>
+              <div class="mb-risk">⚠️ <strong>Risk:</strong> Margin compression on high expectations.</div>
+              <hr class="mb-divider" />
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                <span class="mb-ticker">UNH</span>
+                <span class="mb-chg neg">▼ −1.8%</span>
+              </div>
+              <div class="mb-bull">🟢 <strong>Bull:</strong> Loss ratio pressure may already be priced in…</div>
+              <div class="mb-edu">See full disclosure at thedailywatchlist.com</div>
+              <div class="msg-time">09:00 ✓✓</div>
+            </div>
+          </div>
+          <!-- WA-style bottom bar -->
+          <div class="msg-footer">
+            <div class="msg-footer-input">Message</div>
+            <div class="msg-footer-mic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SCOREBOARD ────────────────────────────────────── -->
+<section id="scoreboard" class="section-pad" aria-labelledby="sb-h2">
+  <div class="container">
+    <div class="eyebrow centered reveal" style="display:flex;width:fit-content;margin-left:auto;margin-right:auto;"><span class="dot" aria-hidden="true"></span>Public Research Log</div>
+    <h2 id="sb-h2" class="section-title centered reveal">Check the ideas after they publish.</h2>
+    <p class="section-sub centered reveal" style="margin-left:auto;margin-right:auto;margin-bottom:32px;">Reference prices, later movement, and S&amp;P 500 comparison for educational tracking. Positive and negative outcomes both stay visible. This is not investment performance reporting.</p>
+
+    <p style="font-size:0.78rem;color:var(--text-3);margin-bottom:16px;text-align:center;">Selected ideas from July onward. Reference prices recorded at 9:00 AM ET. For educational tracking only, not a daily archive of every brief.</p>
+
+    <div class="card reveal sb-wrap">
+      <div class="sb-table-wrap">
+        <div class="sb-table" role="table" aria-label="Public research log, educational tracking">
+          <div class="sb-head" role="row">
+            <span role="columnheader">Ticker</span>
+            <span role="columnheader">Published</span>
+            <span role="columnheader">Ref. Price</span>
+            <span role="columnheader">Since Pub.</span>
+            <span role="columnheader">vs S&amp;P 500</span>
+            <span role="columnheader">Status</span>
+          </div>
+          <div id="sbBody">
+            <!-- Sample log: weekly cadence Jul–Aug (not daily). Replaced by JS when worker data is available. -->
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">AMD</span>
+              <span class="sb-date" role="cell">Aug 11, 2026</span>
+              <span class="sb-muted" role="cell">—</span>
+              <span class="sb-muted" role="cell">Today</span>
+              <span class="sb-muted" role="cell">—</span>
+              <span role="cell"><span class="sb-badge pending">New</span></span>
+            </div>
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">META</span>
+              <span class="sb-date" role="cell">Aug 4, 2026</span>
+              <span class="sb-price" role="cell">$528.40</span>
+              <span role="cell"><span class="sb-up">+4.2%</span></span>
+              <span role="cell"><span class="sb-up">+2.1%</span></span>
+              <span role="cell"><span class="sb-badge tracked">Tracked</span></span>
+            </div>
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">JPM</span>
+              <span class="sb-date" role="cell">Jul 28, 2026</span>
+              <span class="sb-price" role="cell">$298.60</span>
+              <span role="cell"><span class="sb-up">+3.6%</span></span>
+              <span role="cell"><span class="sb-up">+1.8%</span></span>
+              <span role="cell"><span class="sb-badge tracked">Tracked</span></span>
+            </div>
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">XOM</span>
+              <span class="sb-date" role="cell">Jul 21, 2026</span>
+              <span class="sb-price" role="cell">$112.80</span>
+              <span role="cell"><span class="sb-down">−2.4%</span></span>
+              <span role="cell"><span class="sb-down">−3.1%</span></span>
+              <span role="cell"><span class="sb-badge moved-lower">Tracked</span></span>
+            </div>
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">AMZN</span>
+              <span class="sb-date" role="cell">Jul 14, 2026</span>
+              <span class="sb-price" role="cell">$224.15</span>
+              <span role="cell"><span class="sb-up">+5.1%</span></span>
+              <span role="cell"><span class="sb-up">+2.9%</span></span>
+              <span role="cell"><span class="sb-badge tracked">Tracked</span></span>
+            </div>
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">UNH</span>
+              <span class="sb-date" role="cell">Jul 7, 2026</span>
+              <span class="sb-price" role="cell">$318.90</span>
+              <span role="cell"><span class="sb-down">−1.8%</span></span>
+              <span role="cell"><span class="sb-down">−2.6%</span></span>
+              <span role="cell"><span class="sb-badge moved-lower">Tracked</span></span>
+            </div>
+            <div class="sb-row" role="row">
+              <span class="sb-tick" role="cell">NVDA</span>
+              <span class="sb-date" role="cell">Jul 1, 2026</span>
+              <span class="sb-price" role="cell">$152.40</span>
+              <span role="cell"><span class="sb-up">+8.7%</span></span>
+              <span role="cell"><span class="sb-up">+5.4%</span></span>
+              <span role="cell"><span class="sb-badge tracked">Tracked</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="sb-note reveal">Reference prices are recorded at 9:00 AM ET on the day of publication, before the market opens. Figures shown for educational tracking only. They do not represent investment returns, include trading costs, or predict future outcomes. <span class="sb-badge illus" style="vertical-align:middle;">Illustrative</span> rows are clearly labelled.</p>
+  </div>
+</section>
+
+<!-- ─── FAQ ───────────────────────────────────────────── -->
+<section id="faq" class="section-pad" aria-labelledby="faq-h2">
+  <div class="container">
+    <div class="eyebrow centered reveal" style="display:flex;width:fit-content;margin-left:auto;margin-right:auto;"><span class="dot" aria-hidden="true"></span>FAQ</div>
+    <h2 id="faq-h2" class="section-title centered reveal">Straight answers to the obvious questions</h2>
+
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+          What's the cost, and can I leave anytime?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">Nothing. No card, no trial period, and no paid tier hidden behind today's brief. If we ever introduce optional paid content, you would be told first and never automatically enrolled. Leaving is just leaving a WhatsApp group. There is genuinely nothing to cancel.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+          Will you ever ask me to send money or crypto?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">No. We do not accept deposits, manage member funds, place trades, or ask for wallet keys, login codes, crypto transfers, or unlock fees of any kind. The group exists solely to deliver the daily educational brief.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+          Is this investment advice? Will it tell me what to buy?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">No, on both counts. The brief is research on publicly available information. We present what is moving, the verified catalyst, the argument for the move, and the argument against it. We do not know your financial situation, goals, or risk tolerance, and we make no price targets, predictions, or accuracy claims. What you do with the information is entirely your decision. For personal financial advice, speak with a licensed professional.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+          Which stocks and sectors do you cover?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">US-listed stocks across all major sectors: technology, healthcare, financials, energy, consumer, and industrials. Coverage follows where notable pre-market movement and verifiable public catalysts appear that morning. It is not a fixed watchlist.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5">
+          Can I review the research log before I join?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5">Yes. It is on this page above. The public log shows each published idea, the reference price at publication, subsequent price movement, and an S&amp;P 500 comparison for context. That includes ideas that moved in the wrong direction. Take a look before you decide.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─────────────────────────────────────── -->
+<section class="final-cta" aria-labelledby="final-cta-h2">
+  <div class="final-cta-inner">
+    <div class="eyebrow amber centered reveal" style="display:flex;width:fit-content;margin-left:auto;margin-right:auto;margin-bottom:20px;">
+      <span class="dot" aria-hidden="true"></span>Get Started
+    </div>
+    <h2 id="final-cta-h2" class="reveal">The daily pre-market research brief.</h2>
+    <p class="reveal">Published at 9:00 AM ET each trading day, 30 minutes before the NYSE open.</p>
+    <button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"
+    onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp"> 
+      <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
+    </button>
+    <div class="cta-reassurance reveal">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No credit card</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No deposit</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Leave anytime</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Educational research only</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FULL DISCLOSURE ───────────────────────────────── -->
+<section id="disclosure" class="section-pad" aria-labelledby="disc-h2">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Before You Join</div>
+    <h2 id="disc-h2" class="section-title reveal">Full Disclosure</h2>
+    <p class="section-sub reveal">The things most publications bury in the fine print. We put them here, before you join.</p>
+
+    <div class="disc-grid">
+      <div class="card disc-item reveal">
+        <div class="disc-q">Who runs this?</div>
+        <div class="disc-a">The Daily Watchlist, LLC, a Delaware limited liability company. Not a registered investment adviser or broker-dealer.</div>
+      </div>
+      <div class="card disc-item reveal">
+        <div class="disc-q">What do I get?</div>
+        <div class="disc-a">A daily research brief on 2–3 US stocks: the public catalyst, what could go right, what could go wrong, and the key risk. Delivered to a WhatsApp group at 9:00 AM ET every trading day.</div>
+      </div>
+      <div class="card disc-item reveal">
+        <div class="disc-q">How are stocks selected?</div>
+        <div class="disc-a">A fixed screen: notable pre-market movement plus a verifiable public catalyst. Public information only. No insider sources, no manual picks.</div>
+      </div>
+      <div class="card disc-item reveal">
+        <div class="disc-q">Is this investment advice?</div>
+        <div class="disc-a">No. General research on publicly available information. We don't know your goals, risk tolerance, or circumstances. Talk to a licensed professional before making any investment decisions.</div>
+      </div>
+      <div class="card disc-item reveal">
+        <div class="disc-q">Any guarantees?</div>
+        <div class="disc-a">None. Markets carry risk. Every idea includes the risk case alongside the positive argument, and the research log shows all outcomes, not just the good ones.</div>
+      </div>
+      <div class="card disc-item reveal">
+        <div class="disc-q">Will I be asked to send money or crypto?</div>
+        <div class="disc-a">No. We do not accept deposits, manage funds, place trades for members, or request crypto, wallet keys, or login credentials. The brief carries no charge.</div>
+      </div>
+      <div class="card disc-item disc-full reveal">
+        <div class="disc-q">Risk notice</div>
+        <div class="disc-a">Investing involves risk, including possible loss of principal. Past price movements are for context only. They are not indicative of future results. Nothing here is a solicitation or recommendation to buy or sell any security. Always consult a licensed financial professional. See our <a href="/terms-of-use">Terms of Use</a> and <a href="/privacy-policy">Privacy Policy</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Global footer injected by components.js -->
+<div id="g-footer"></div>
+
+<!-- ─── SCRIPTS ────────────────────────────────────────── -->
+<script>
+/* ─── CONFIGURATION ───────────────────────────────────────
+ * Single source of truth for the WhatsApp number.
+ * Replace REPLACE_WHATSAPP_NUMBER with the actual number (e.g. 12025551234).
+ */
+var CFG = {
+  WA:     'REPLACE_WHATSAPP_NUMBER',
+  WORKER: 'https://daily-watchlist-ideas.rlockman.workers.dev'
+  // NOTE: No Finnhub API key here. All market data must route via the Worker.
+  // API key is stored as a Cloudflare Worker secret (wrangler secret put FINNHUB_KEY).
+};
+
+/* ─── ANALYTICS TRACKER ─────────────────────────────── */
+var tdw = {
+  track: function(event, props) {
+    if (typeof gtag !== 'undefined') { gtag('event', event, props || {}); }
+    if (typeof fbq  !== 'undefined') { fbq('trackCustom', event, props || {}); }
+    console.debug('[TDW Analytics]', event, props);
+  }
+};
+
+/* ─── FAQ ACCORDION ──────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item    = btn.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open this if was closed
+      if (!wasOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        tdw.track('faq_open', { question: btn.textContent.trim().slice(0, 60) });
+      }
+    });
+
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+  });
+});
+
+/* ─── SCROLL REVEAL ──────────────────────────────────── */
+(function() {
+  var items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  items.forEach(function(el) { io.observe(el); });
+}());
+
+/* ─── HELPERS ────────────────────────────────────────── */
+function fmtP(n) { return (n == null || isNaN(n)) ? '—' : '$' + n.toLocaleString('en-US', { minimumFractionDigits:2, maximumFractionDigits:2 }); }
+function fmtPct(n) { return (n == null || isNaN(n)) ? '—' : (n > 0 ? '+' : '') + n.toFixed(2) + '%'; }
+function isMarketOpen() {
+  try {
+    var et   = new Date(new Date().toLocaleString('en-US', { timeZone:'America/New_York' }));
+    var day  = et.getDay(); var mins = et.getHours() * 60 + et.getMinutes();
+    return day >= 1 && day <= 5 && mins >= 570 && mins < 960;
+  } catch(e) { return false; }
+}
+function nowET() {
+  try { return new Date().toLocaleString('en-US', { timeZone:'America/New_York', hour:'2-digit', minute:'2-digit', hour12:true }); }
+  catch(e) { return ''; }
+}
+
+/* ─── TICKER TAPE ────────────────────────────────────── */
+var TICKER_SYMS = ['AAPL','MSFT','NVDA','AMZN','GOOGL','META','JPM','V','XOM','WMT','UNH','DIS','KO','AMD','TSLA'];
+
+function renderTicker(quotes, isDemo) {
+  var track = document.getElementById('tickerTrack');
+  var dot   = document.getElementById('tickerDot');
+  var stat  = document.getElementById('tickerStatus');
+  var upd   = document.getElementById('tickerUpdateTime');
+  if (!track) return;
+
+  var html = '';
+  TICKER_SYMS.forEach(function(sym) {
+    var q = quotes[sym];
+    if (!q || !q.c) {
+      html += '<div class="ticker-item"><span class="t-sym">' + sym + '</span><span class="t-px">—</span><span class="t-chg">—</span></div>';
+      return;
+    }
+    var up  = q.dp >= 0;
+    var arr = up ? '▲' : '▼';
+    html += '<div class="ticker-item"><span class="t-sym">' + sym + '</span>'
+         + '<span class="t-px">' + fmtP(q.c) + '</span>'
+         + '<span class="t-chg ' + (up ? 'up' : 'down') + '"><span class="arr">' + arr + '</span>&nbsp;' + fmtPct(q.dp) + '</span></div>';
+  });
+
+  if (html) track.innerHTML = html + html; // double for seamless loop
+
+  var open = isMarketOpen();
+  if (dot) { dot.className = 'ticker-dot' + (isDemo ? ' demo' : open ? '' : ' closed'); }
+  if (stat) { stat.textContent = isDemo ? 'Demo Data · reference only, not live' : (open ? 'Live · Updated ' + nowET() + ' ET' : 'Last close · Updated ' + nowET() + ' ET'); }
+  if (upd)  { upd.textContent = isDemo ? '' : 'Not a recommendation'; }
+}
+
+function fetchTicker() {
+  if (!CFG.WORKER || CFG.WORKER.indexOf('REPLACE') !== -1) {
+    renderTicker({}, true); return;
+  }
+  fetch(CFG.WORKER + '/quotes?t=' + Date.now(), { cache: 'no-store' })
+    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(d) { renderTicker(d, false); })
+    .catch(function(e) {
+      console.warn('[Ticker] Failed:', e.message);
+      var dot = document.getElementById('tickerDot');
+      var st  = document.getElementById('tickerStatus');
+      if (dot) dot.className = 'ticker-dot demo';
+      if (st)  st.textContent = 'Market data unavailable · Showing placeholders';
+    });
+}
+
+/* ─── HERO CARD (live ideas) ─────────────────────────── */
+function renderIdeas(edition) {
+  if (!edition || !Array.isArray(edition.ideas) || !edition.ideas.length) return;
+  var list = document.getElementById('ideasList');
+  var dateEl = document.getElementById('cardDate');
+  if (!list) return;
+
+  if (dateEl && edition.dateLabel) dateEl.textContent = edition.dateLabel + ' · 9:00 AM ET';
+
+  var html = '';
+  edition.ideas.forEach(function(idea, i) {
+    var up  = idea.dailyChangePct >= 0;
+    var chg = fmtPct(idea.dailyChangePct);
+    var cls = up ? 'up' : 'down';
+    if (i > 0) html += '<hr style="border:none;border-top:1px solid var(--border);margin:10px 0;"/>';
+    html += '<div style="margin-bottom:8px;">'
+         + '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">'
+         + '<span class="rc-ticker">' + idea.ticker + '</span>'
+         + '<span class="rc-chg ' + cls + '">' + chg + '</span></div>';
+
+    if (i === 0) {
+      html += '<div class="rc-catalyst">' + (idea.bull ? idea.bull.slice(0, 90) + (idea.bull.length > 90 ? '…' : '') : 'Catalyst pending') + '</div>';
+      html += '<div class="rc-analysis">';
+      if (idea.bull) html += '<div class="rc-side bull"><strong>Bull:</strong> ' + escText(idea.bull.slice(0, 80)) + (idea.bull.length > 80 ? '…' : '') + '</div>';
+      if (idea.bear) html += '<div class="rc-side bear"><strong>Bear:</strong> ' + escText(idea.bear.slice(0, 80)) + (idea.bear.length > 80 ? '…' : '') + '</div>';
+      html += '</div>';
+    } else if (i === 1) {
+      var preview = idea.bull ? idea.bull.slice(0, 70) + (idea.bull.length > 70 ? '…' : '') : '';
+      html += '<div class="rc-side bull" style="margin-top:4px;"><strong>Bull:</strong> ' + escText(preview) + '</div>';
+    }
+    html += '</div>';
+  });
+  list.innerHTML = html;
+}
+
+function escText(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ─── SCOREBOARD (live) ──────────────────────────────── */
+function renderScoreboard(history) {
+  if (!Array.isArray(history) || !history.length) return;
+  var body = document.getElementById('sbBody');
+  if (!body) return;
+
+  var rows = '';
+  history.slice().reverse().forEach(function(entry) {
+    var hasPct   = typeof entry.pctSincePublished === 'number';
+    var hasVsSpx = typeof entry.vsSpxPct === 'number';
+    var pctStr   = hasPct ? fmtPct(entry.pctSincePublished) : '—';
+    var vsStr    = hasVsSpx ? fmtPct(entry.vsSpxPct) : '—';
+    var pctCls   = hasPct ? (entry.pctSincePublished >= 0 ? 'sb-up' : 'sb-down') : 'sb-muted';
+    var vsCls    = hasVsSpx ? (entry.vsSpxPct >= 0 ? 'sb-up' : 'sb-down') : 'sb-muted';
+    var pubDate  = '';
+    try { pubDate = new Date(entry.publishedAt).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }); } catch(e) {}
+    var isNew    = !hasPct || entry.pctSincePublished === 0;
+    var badge    = isNew
+      ? '<span class="sb-badge pending">New</span>'
+      : '<span class="sb-badge ' + (entry.pctSincePublished >= 0 ? 'tracked' : 'moved-lower') + '">Tracked</span>';
+    var refPrice = entry.entryPrice ? fmtP(entry.entryPrice) : '—';
+
+    rows += '<div class="sb-row" role="row">'
+         + '<span class="sb-tick" role="cell">' + escText(entry.ticker) + '</span>'
+         + '<span class="sb-date" role="cell">' + pubDate + '</span>'
+         + '<span class="sb-price" role="cell">' + refPrice + '</span>'
+         + '<span role="cell">' + (hasPct ? '<span class="' + pctCls + '">' + pctStr + '</span>' : '<span class="sb-muted">—</span>') + '</span>'
+         + '<span role="cell">' + (hasVsSpx ? '<span class="' + vsCls + '">' + vsStr + '</span>' : '<span class="sb-muted">—</span>') + '</span>'
+         + '<span role="cell">' + badge + '</span></div>';
+  });
+  if (rows) body.innerHTML = rows;
+}
+
+/* ─── BOOTSTRAP: LOAD EVERYTHING ────────────────────── */
+(function init() {
+  // Ticker tape
+  fetchTicker();
+  setInterval(fetchTicker, 90000);
+
+  // Worker-dependent features
+  if (CFG.WORKER && CFG.WORKER.indexOf('REPLACE') === -1) {
+    // Live ideas
+    fetch(CFG.WORKER + '/ideas', { cache: 'no-store' })
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(renderIdeas)
+      .catch(function(e) { console.warn('[Ideas]', e.message); });
+
+    // Scoreboard
+    fetch(CFG.WORKER + '/scoreboard', { cache: 'no-store' })
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(renderScoreboard)
+      .catch(function(e) { console.warn('[Scoreboard]', e.message); });
+  } else {
+    // Worker not configured — chart in fallback
+    var dot = document.getElementById('tickerDot');
+    var st  = document.getElementById('tickerStatus');
+    if (dot) dot.className = 'ticker-dot demo';
+    if (st)  st.textContent = 'Worker not configured · showing placeholder data';
+  }
+
+}());
+</script>
+
+<!-- WA icon SVG — placed at end of body so it never creates top-of-page whitespace -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.845L0 24l6.347-1.524A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.505-5.23-1.384l-.374-.222-3.878.931.931-3.791-.245-.389A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="components.js"></script>
+</body>
+</html>

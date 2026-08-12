@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>You're In | The Daily Watchlist</title>
+  <meta name="description" content="You're in. The Daily Watchlist morning brief publishes at 9:00 AM ET every trading day." />
+  <link rel="canonical" href="https://thedailywatchlist.com/thank-you" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%231E3A5F'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='26' fill='%23F59E0B'>DW</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #FFFFFF;
+      --text:       #172033;
+      --text-2:     #5D6678;
+      --text-3:     #94A3B8;
+      --border:     #E2E8F0;
+      --blue:       #2563EB;
+      --blue-dark:  #1E3A5F;
+      --blue-light: #EFF6FF;
+      --wa:         #25D366;
+      --wa-dark:    #128C7E;
+      --bull:       #16834A;
+      --radius:     12px;
+      --radius-lg:  18px;
+      --shadow:     0 4px 16px rgba(23,32,51,0.08), 0 2px 4px rgba(23,32,51,0.04);
+    }
+
+    html { background: #fff; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2 { font-family: 'Lora', serif; }
+
+    .ty {
+      flex: 1;
+      background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 70%);
+      padding: 72px 5% 64px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ty-inner {
+      width: 100%; max-width: 560px; text-align: center;
+    }
+
+    .ty-check {
+      width: 64px; height: 64px; margin: 0 auto 22px;
+      border-radius: 50%;
+      background: #DCFCE7;
+      border: 1.5px solid rgba(22,131,74,0.22);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--bull);
+      animation: pop 0.45s ease both;
+    }
+    .ty-check svg { width: 28px; height: 28px; }
+    @keyframes pop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .ty-label {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
+      color: var(--bull); background: #DCFCE7; border: 1px solid rgba(22,131,74,0.2);
+      padding: 5px 12px; border-radius: 100px; margin-bottom: 18px;
+    }
+    .ty-label .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--bull);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+      font-weight: 700; line-height: 1.2; color: var(--text);
+      margin-bottom: 14px;
+    }
+    .ty-sub {
+      font-size: 1.02rem; color: var(--text-2); line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .ty-sub strong { color: var(--text); font-weight: 600; }
+
+    .ty-next {
+      text-align: left;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 26px 28px;
+      margin-bottom: 28px;
+    }
+    .ty-next h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--text-3); margin-bottom: 18px;
+    }
+    .ty-step {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .ty-step:first-of-type { padding-top: 0; }
+    .ty-step:last-child { border-bottom: none; padding-bottom: 0; }
+    .ty-num {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--blue-light); color: var(--blue);
+      border: 1px solid rgba(37,99,235,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700;
+    }
+    .ty-step strong {
+      display: block; font-size: 0.92rem; font-weight: 700; color: var(--text);
+      margin-bottom: 3px;
+    }
+    .ty-step p {
+      font-size: 0.84rem; color: var(--text-2); line-height: 1.55;
+    }
+
+    .ty-actions {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+      margin-bottom: 22px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 24px; border-radius: var(--radius); font-size: 0.92rem; font-weight: 600;
+      text-decoration: none; transition: all 0.18s ease;
+    }
+    .btn-wa {
+      background: var(--wa); color: #fff;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.3);
+    }
+    .btn-wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; color: var(--text); border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+    .wa-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .ty-note {
+      font-size: 0.78rem; color: var(--text-3); line-height: 1.6;
+    }
+
+    @media (max-width: 540px) {
+      .ty { padding: 48px 5% 48px; }
+      .ty-next { padding: 22px 18px; }
+      .ty-actions { flex-direction: column; }
+      .btn { justify-content: center; width: 100%; }
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260804-2">
+  <script src="assets/whatsapp-popup.js?v=20260804-2" defer></script>
+  <script src="https://www.chatfromforms.com/form-embed.js?v=0.1" defer></script>
+</head>
+<body>
+
+  <div id="g-nav"></div>
+
+  <main class="ty" aria-labelledby="ty-h1">
+    <div class="ty-inner">
+
+      <div class="ty-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+
+      <div class="ty-label"><span class="dot" aria-hidden="true"></span>Confirmed</div>
+
+      <h1 id="ty-h1">You're in.</h1>
+      <p class="ty-sub">
+        The morning brief publishes at <strong>9:00 AM ET</strong> every trading day,
+        30 minutes before the NYSE open. Educational research only. Not investment advice.
+      </p>
+
+      <div class="ty-next">
+        <h2>What happens next</h2>
+        <div class="ty-step">
+          <div class="ty-num" aria-hidden="true">1</div>
+          <div>
+            <strong>Join the WhatsApp group</strong>
+            <p>If you have not joined yet, use the button below. That is where the brief is delivered.</p>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-num" aria-hidden="true">2</div>
+          <div>
+            <strong>Watch for the 9:00 AM ET brief</strong>
+            <p>Each trading day: 2–3 US stocks with a public catalyst, the case for the move, and the case against it.</p>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-num" aria-hidden="true">3</div>
+          <div>
+            <strong>Leave anytime</strong>
+            <p>No card, no deposit, nothing to cancel. Exit the WhatsApp group whenever you want.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ty-actions">
+        <a href="https://wa.me/REPLACE_WHATSAPP_NUMBER" class="btn btn-wa"
+           target="_blank" rel="noopener noreferrer"
+           onclick="typeof tdw!=='undefined'&&tdw.track('thankyou_wa_cta')">
+          <svg class="wa-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Open WhatsApp Group
+        </a>
+        <a href="/" class="btn btn-outline">Back to Home</a>
+      </div>
+
+      <p class="ty-note">Educational content only. Not a recommendation to buy or sell any security.</p>
+    </div>
+  </main>
+
+  <div id="g-footer"></div>
+  <script src="components.js"></script>
+
+</body>
+</html>

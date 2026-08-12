@@ -1,0 +1,28 @@
+Options -Indexes
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# index.html → /
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Other .html files → clean URLs
+# thank-you.html → /thank-you
+# privacy-policy.html → /privacy-policy
+# terms-of-use.html → /terms-of-use
+RewriteCond %{THE_REQUEST} \s/+([^.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Serve underlying .html for clean URL requests
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)/?$ $1.html [L]
+
+# Canonical: remove trailing slash (except root)
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /%1 [R=301,L]

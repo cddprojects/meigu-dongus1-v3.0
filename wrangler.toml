@@ -1,0 +1,18 @@
+name = "daily-watchlist-ideas"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Daily publish cycle — runs Mon–Fri at 12:00 UTC (08:00 AM ET during EDT)
+[triggers]
+crons = ["0 12 * * 1-5"]
+
+[[kv_namespaces]]
+binding = "IDEAS_KV"
+id = "c02886e839a34a42badc4f83495917d7"
+
+# --- Setup checklist ---
+# 1. Store Finnhub key as a secret (never in code):
+#    wrangler secret put FINNHUB_KEY
+# 2. Deploy: wrangler deploy
+# 3. Confirm the worker URL matches CFG.WORKER in index.html:
+#    https://daily-watchlist-ideas.rlockman.workers.dev
