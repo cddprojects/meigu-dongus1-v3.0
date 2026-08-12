@@ -96,7 +96,7 @@
     }\
     footer.site-footer { background: var(--blue-dark); padding: 56px 0 36px; }\
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 36px; max-width: 1200px; margin: 0 auto 44px; padding: 0 5%; }\
-    .footer-brand { font-family: "Lora", Georgia, serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }\
+    .footer-brand { font-family: "Lora", Georgia, serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; display:flex; align-items: center; gap: 12px;}\
     .footer-brand-desc { font-size: 0.8rem; color: rgba(255,255,255,0.68); line-height: 1.7; max-width: 240px; }\
     .footer-col h5 { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 14px; }\
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; margin: 0; padding: 0; }\
@@ -153,7 +153,7 @@
       + '<footer class="site-footer" role="contentinfo">'
       +   '<div class="footer-grid">'
       +     '<div>'
-      +       '<div class="footer-brand">The Daily Watchlist</div>'
+      +       '<div class="footer-brand"><img src="logo-light.png" alt="The Daily Watchlist" width="32" height="32" />The Daily Watchlist</div>'
       +       '<p class="footer-brand-desc">Daily pre-market research on US stocks. Published at 9:00 AM ET every trading day, before the 9:30 AM ET open.</p>'
       +     '</div>'
       +     '<nav class="footer-col" aria-label="Research">'
