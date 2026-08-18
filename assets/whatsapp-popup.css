@@ -165,7 +165,7 @@ button[data-hz-whatsapp-cta] {
   max-width: 27rem;
   margin: 0.25rem 0 0;
   color: var(--hz-wa-muted);
-  font: 500 0.88rem/1.5 "Inter", system-ui, sans-serif;
+  font: 500 1rem/1.5 "Inter", system-ui, sans-serif;
 }
 
 .hz-whatsapp__close {
