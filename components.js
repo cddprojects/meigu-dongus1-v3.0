@@ -8,8 +8,9 @@
 (function () {
   'use strict';
 
-  var WA_NUMBER = 'REPLACE_WHATSAPP_NUMBER';
-  var WA_HREF = 'https://wa.me/' + WA_NUMBER;
+  var WA_HREF = 'https://wa.me/14102580713?text=' + encodeURIComponent(
+    "Hi, I'd like to join the free The Daily Watchlist daily market analysis group."
+  );
 
   var path = (location.pathname || '/').replace(/\/+$/, '') || '/';
   var isHome = path === '/' || /(?:^|\/)index\.html$/.test(path);
@@ -127,10 +128,10 @@
       +       '<a href="' + href('#faq') + '" role="listitem">FAQ</a>'
       +     '</div>'
       +     '<div class="nav-right">'
-      +       '<button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"'
+      +       '<a class="btn btn-wa btn-sm" href="' + WA_HREF + '" target="_blank" rel="noopener noreferrer"'
       +         ' onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp">'
       +         WA_ICON + ' Get the Brief'
-      +       '</button>'
+      +       '</a>'
       +       '<button class="nav-hamburger" id="mobileMenuBtn" type="button"'
       +         ' aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">'
       +         '<svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'
