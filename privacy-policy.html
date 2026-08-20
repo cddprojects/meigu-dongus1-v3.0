@@ -32,9 +32,10 @@
       --wa:     #25D366;
     }
 
-    html { scroll-behavior: smooth; }
+    html { font-size: 16px; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
+      font-size: 1rem;
       color: var(--gray900);
       background: var(--white);
       line-height: 1.6;
@@ -60,7 +61,7 @@
       font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 14px;
     }
     .page-hero p {
-      font-size: 0.95rem; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto;
+      font-size: 1rem; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto;
     }
 
     /* ─── CONTENT ─────────────────────────────────────────── */
@@ -78,7 +79,7 @@
       margin-bottom: 52px;
     }
     .policy-toc h2 {
-      font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
       text-transform: uppercase; color: var(--blue2); margin-bottom: 14px;
     }
     .policy-toc ol {
@@ -86,7 +87,7 @@
       display: flex; flex-direction: column; gap: 8px;
     }
     .policy-toc ol li a {
-      color: var(--gray700); text-decoration: none; font-size: 0.9rem;
+      color: var(--gray700); text-decoration: none; font-size: 1rem;
       font-weight: 500; transition: color 0.15s;
     }
     .policy-toc ol li a:hover { color: var(--blue2); }
@@ -102,7 +103,7 @@
       border-bottom: 2px solid var(--gray100);
     }
     .policy-section p {
-      font-size: 0.93rem; color: var(--gray700); line-height: 1.8; margin-bottom: 14px;
+      font-size: 1rem; color: var(--gray700); line-height: 1.8; margin-bottom: 14px;
     }
     .policy-section p:last-child { margin-bottom: 0; }
     .policy-section ul {
@@ -110,7 +111,7 @@
     }
     .policy-section ul li {
       display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.93rem; color: var(--gray700); line-height: 1.7;
+      font-size: 1rem; color: var(--gray700); line-height: 1.7;
     }
     .policy-section ul li::before {
       content: ''; width: 6px; height: 6px; border-radius: 50%;
@@ -121,11 +122,11 @@
     .highlight-box {
       background: #eff6ff; border: 1px solid #bfdbfe;
       border-radius: 10px; padding: 18px 20px;
-      font-size: 0.9rem; color: #1e40af; line-height: 1.7; margin: 16px 0;
+      font-size: 1rem; color: #1e40af; line-height: 1.7; margin: 16px 0;
     }
 
     .last-updated {
-      display: inline-block; font-size: 0.78rem; color: var(--gray400);
+      display: inline-block; font-size: 0.8125rem; color: var(--gray400);
       background: var(--gray100); border-radius: 6px;
       padding: 4px 12px; margin-bottom: 48px;
     }
@@ -136,9 +137,8 @@
     }
   </style>
 
-  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260804-2">
-  <script src="assets/whatsapp-popup.js?v=20260804-2" defer></script>
-  <script src="https://www.chatfromforms.com/form-embed.js?v=0.1" defer></script>
+  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260820-2">
+  <script src="assets/whatsapp-popup.js?v=20260820-2" defer></script>
 </head>
 
 <body>
@@ -258,6 +258,6 @@
   <!-- global footer injected by components.js -->
   <div id="g-footer"></div>
 
-  <script src="components.js"></script>
+  <script src="components.js?v=20260820-4"></script>
 </body>
 </html>

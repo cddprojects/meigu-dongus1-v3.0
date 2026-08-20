@@ -8,8 +8,9 @@
 (function () {
   'use strict';
 
-  var WA_NUMBER = 'REPLACE_WHATSAPP_NUMBER';
-  var WA_HREF = 'https://wa.me/' + WA_NUMBER;
+  var WA_HREF = 'https://wa.me/17202322867?text=' + encodeURIComponent(
+    "Hi, I'd like to join the free The Daily Watchlist daily market analysis group."
+  );
 
   var path = (location.pathname || '/').replace(/\/+$/, '') || '/';
   var isHome = path === '/' || /(?:^|\/)index\.html$/.test(path);
@@ -18,6 +19,12 @@
     if (!hash || hash === '#') return isHome ? '/' : '/';
     return isHome ? hash : ('/' + hash);
   }
+  function pageHref(slug) {
+    // Relative .html works in local preview. Live hosts 301 these to clean URLs.
+    return slug + '.html';
+  }
+  var isThankYou = /(?:^|\/)thank-you(?:\.html)?$/.test(path);
+  var waIdAttr = isThankYou ? '' : ' id="waf1"';
 
   var WA_ICON = '<svg class="wa-icon-sm" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.845L0 24l6.347-1.524A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.505-5.23-1.384l-.374-.222-3.878.931.931-3.791-.245-.389A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>';
 
@@ -51,7 +58,7 @@
     }\
     .nav-links { display: flex; align-items: center; gap: 24px; }\
     .nav-links a {\
-      font-size: 0.85rem; font-weight: 500; color: var(--text-2); text-decoration: none;\
+      font-size: 1rem; font-weight: 500; color: var(--text-2); text-decoration: none;\
       transition: color 0.15s; padding: 4px 0;\
     }\
     .nav-links a:hover { color: var(--blue); }\
@@ -59,7 +66,7 @@
     .nav-right { display: flex; align-items: center; gap: 12px; }\
     .nav .btn {\
       display: inline-flex; align-items: center; gap: 8px;\
-      padding: 8px 16px; border-radius: var(--radius); font-size: 0.82rem; font-weight: 600;\
+      padding: 10px 18px; border-radius: var(--radius); font-size: 1rem; font-weight: 600;\
       text-decoration: none; cursor: pointer; border: none; transition: all 0.18s ease;\
       white-space: nowrap; font-family: inherit;\
     }\
@@ -97,13 +104,13 @@
     footer.site-footer { background: var(--blue-dark); padding: 56px 0 36px; }\
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 36px; max-width: 1200px; margin: 0 auto 44px; padding: 0 5%; }\
     .footer-brand { font-family: "Lora", Georgia, serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; display:flex; align-items: center; gap: 12px;}\
-    .footer-brand-desc { font-size: 0.8rem; color: rgba(255,255,255,0.68); line-height: 1.7; max-width: 240px; }\
-    .footer-col h5 { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 14px; }\
+    .footer-brand-desc { font-size: 0.875rem; color: rgba(255,255,255,0.68); line-height: 1.7; max-width: 240px; }\
+    .footer-col h5 { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 14px; }\
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; margin: 0; padding: 0; }\
-    .footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.15s; }\
+    .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.15s; }\
     .footer-col a:hover { color: #fff; }\
     .footer-divider { max-width: 1200px; margin: 0 auto 24px; padding: 0 5%; border: none; border-top: 1px solid rgba(255,255,255,0.14); }\
-    .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 0 5%; font-size: 0.7rem; color: rgba(255,255,255,0.55); line-height: 1.75; }\
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 0 5%; font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.75; }\
     .footer-bottom a { color: rgba(255,255,255,0.7); text-decoration: none; }\
     .footer-bottom a:hover { color: #fff; }\
     @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }\
@@ -127,10 +134,10 @@
       +       '<a href="' + href('#faq') + '" role="listitem">FAQ</a>'
       +     '</div>'
       +     '<div class="nav-right">'
-      +       '<button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"'
+      +       '<a' + waIdAttr + ' class="btn btn-wa btn-sm" href="' + WA_HREF + '" target="_blank" rel="noopener noreferrer"'
       +         ' onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp">'
       +         WA_ICON + ' Get the Brief'
-      +       '</button>'
+      +       '</a>'
       +       '<button class="nav-hamburger" id="mobileMenuBtn" type="button"'
       +         ' aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">'
       +         '<svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'
@@ -169,8 +176,8 @@
       +     '<nav class="footer-col" aria-label="Legal">'
       +       '<h5>Legal</h5>'
       +       '<ul>'
-      +         '<li><a href="/privacy-policy">Privacy Policy</a></li>'
-      +         '<li><a href="/terms-of-use">Terms of Use</a></li>'
+      +         '<li><a href="' + pageHref('privacy-policy') + '">Privacy Policy</a></li>'
+      +         '<li><a href="' + pageHref('terms-of-use') + '">Terms of Use</a></li>'
       +       '</ul>'
       +     '</nav>'
       +   '</div>'

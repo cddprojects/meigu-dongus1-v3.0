@@ -117,13 +117,18 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       --shadow-sm:   0 1px 3px rgba(23,32,51,0.08), 0 1px 2px rgba(23,32,51,0.04);
       --shadow:      0 4px 16px rgba(23,32,51,0.08), 0 2px 4px rgba(23,32,51,0.04);
       --shadow-lg:   0 12px 40px rgba(23,32,51,0.10), 0 4px 8px rgba(23,32,51,0.04);
+
+      --fs-body:     1rem;       /* 16px — body, buttons, FAQ */
+      --fs-sm:       0.875rem;   /* 14px — secondary copy */
+      --fs-caption:  0.8125rem;  /* 13px — disclaimers */
+      --fs-label:    0.75rem;    /* 12px — eyebrows, pills, ticker */
     }
 
     /* ─── BASE ───────────────────────────────────────── */
-    html { scroll-behavior: smooth; background: #FFFFFF; }
+    html { font-size: 16px; scroll-behavior: smooth; background: #FFFFFF; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: var(--text); background: #FFFFFF; line-height: 1.65;
+      font-size: var(--fs-body); color: var(--text); background: #FFFFFF; line-height: 1.65;
       overflow-x: hidden; -webkit-font-smoothing: antialiased;
       padding-top: 64px; /* fixed nav height — pushes all content below the nav */
     }
@@ -148,7 +153,7 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     /* ─── EYEBROW ────────────────────────────────────── */
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+      font-size: var(--fs-label); font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
       color: var(--blue); background: var(--blue-light); border: 1px solid rgba(37,99,235,0.18);
       padding: 5px 12px; border-radius: 100px; margin-bottom: 16px;
     }
@@ -162,7 +167,7 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       font-family: 'Lora', serif; font-size: clamp(1.75rem, 3.2vw, 2.5rem);
       font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: 12px;
     }
-    .section-sub { font-size: 1rem; color: var(--text-2); max-width: 600px; line-height: 1.75; }
+    .section-sub { font-size: var(--fs-body); color: var(--text-2); max-width: 600px; line-height: 1.75; }
     .centered { text-align: center; margin-left: auto; margin-right: auto; }
 
     /* ─── CARD ───────────────────────────────────────── */
@@ -176,7 +181,7 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     /* ─── BUTTONS ────────────────────────────────────── */
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600;
+      padding: 12px 24px; border-radius: var(--radius); font-size: var(--fs-body); font-weight: 600;
       text-decoration: none; cursor: pointer; border: none; transition: all 0.18s ease;
       white-space: nowrap;
     }
@@ -190,14 +195,14 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .btn-wa:hover { background: var(--wa-dark); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,211,102,0.38); }
     .btn-wa-lg {
       background: var(--wa); color: #fff; box-shadow: 0 6px 24px rgba(37,211,102,0.35);
-      padding: 15px 32px; font-size: 1rem; border-radius: var(--radius);
+      padding: 15px 32px; font-size: var(--fs-body); border-radius: var(--radius);
     }
     .btn-wa-lg:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,0.42); }
     .btn-outline {
       background: transparent; color: var(--text); border: 1.5px solid var(--border);
     }
     .btn-outline:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
-    .btn-sm { padding: 8px 16px; font-size: 0.82rem; }
+    .btn-sm { padding: 10px 18px; font-size: var(--fs-body); }
 
     /* WA icon svg helper */
     .wa-icon { width: 18px; height: 18px; flex-shrink: 0; }
@@ -206,7 +211,6 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     @media (max-width: 480px) {
       .section-pad { padding: 40px 0; }
       .section-pad-sm { padding: 28px 0; }
-      .btn-sm-mobile { padding: 8px 14px; font-size: 0.8rem; }
     }
 
     /* ─── TICKER TAPE ─────────────────────────────────── */
@@ -220,7 +224,7 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .ticker-status-bar {
       display: flex; align-items: center; justify-content: space-between;
       max-width: 1200px; margin: 0 auto; padding: 4px 5%;
-      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.5px;
+      font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.5px;
       color: rgba(255,255,255,0.72);
     }
     .ticker-status-indicator { display: flex; align-items: center; gap: 5px; }
@@ -243,17 +247,17 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
 
     .ticker-item {
       display: inline-flex; align-items: center; gap: 6px; padding: 0 18px;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; white-space: nowrap;
+      font-family: 'JetBrains Mono', monospace; font-size: var(--fs-label); white-space: nowrap;
       border-right: 1px solid rgba(255,255,255,0.14);
     }
     .t-sym { font-weight: 700; color: #fff; }
-    .t-px  { color: rgba(255,255,255,0.78); font-size: 0.72rem; }
-    .t-chg { font-weight: 700; font-size: 0.72rem; }
+    .t-px  { color: rgba(255,255,255,0.78); font-size: var(--fs-label); }
+    .t-chg { font-weight: 700; font-size: var(--fs-label); }
     .t-chg.up   { color: #86efac; }
     .t-chg.down { color: #fca5a5; }
-    .t-chg .arr { font-size: 0.65rem; }
+    .t-chg .arr { font-size: var(--fs-label); }
     .ticker-disclaimer {
-      text-align: center; font-size: 0.6rem; color: rgba(255,255,255,0.55);
+      text-align: center; font-size: var(--fs-label); color: rgba(255,255,255,0.55);
       padding: 2px 5% 4px; letter-spacing: 0.3px;
     }
 
@@ -269,21 +273,21 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     }
     .hero-label {
       display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      font-size: var(--fs-label); font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
       color: var(--blue);
     }
-    .hero-label span { display: inline-block; width: 5px; height: 5px; background: var(--blue); border-radius: 50%; animation: blink-green 2s ease-in-out infinite; }
+    .hero-label span { display: inline-block; width: 5px; height: 5px; background: var(--wa); border-radius: 50%; animation: blink-green 2s ease-in-out infinite; }
     .hero h1 {
       font-family: 'Lora', serif; font-size: clamp(2.1rem, 4vw, 3.2rem);
       font-weight: 700; line-height: 1.18; color: var(--text); margin-bottom: 20px;
     }
     .hero h1 em { font-style: italic; color: var(--blue); }
-    .hero-sub { font-size: 1rem; color: var(--text-2); margin-bottom: 28px; max-width: 480px; line-height: 1.7; }
+    .hero-sub { font-size: var(--fs-body); color: var(--text-2); margin-bottom: 28px; max-width: 480px; line-height: 1.7; }
 
     .hero-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; max-width: 460px; }
     .hero-bullets li {
       display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.92rem; color: var(--text-2); line-height: 1.5;
+      font-size: var(--fs-body); color: var(--text-2); line-height: 1.5;
     }
     .hb-dot {
       width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
@@ -294,7 +298,7 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
     .btn-wa { padding: 12px 24px; }
     .hero-disclaimer {
-      font-size: 0.71rem; color: var(--text-3); line-height: 1.6;
+      font-size: var(--fs-caption); color: var(--text-3); line-height: 1.6;
       padding-top: 14px; border-top: 1px solid var(--border); max-width: 440px;
     }
     .hero-disclaimer a { color: var(--blue); text-underline-offset: 2px; }
@@ -314,10 +318,10 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       background: var(--blue-dark); padding: 14px 20px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .rc-brand { font-family: 'Lora', serif; font-size: 0.88rem; font-weight: 700; color: #fff; }
-    .rc-meta { font-size: 0.65rem; color: rgba(255,255,255,0.55); font-family: 'JetBrains Mono', monospace; }
+    .rc-brand { font-family: 'Lora', serif; font-size: var(--fs-sm); font-weight: 700; color: #fff; }
+    .rc-meta { font-size: var(--fs-label); color: rgba(255,255,255,0.55); font-family: 'JetBrains Mono', monospace; }
     .rc-tag {
-      display: inline-flex; align-items: center; gap: 4px; font-size: 0.6rem; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-label); font-weight: 700;
       letter-spacing: 0.8px; text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
       border: 1px solid rgba(37,211,102,0.4); color: #4ade80; background: rgba(37,211,102,0.1);
     }
@@ -327,25 +331,25 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       padding-bottom: 10px; border-bottom: 1px solid var(--border);
     }
     .rc-stock-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .rc-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.88rem; color: var(--text); flex: 1; }
-    .rc-sector { font-size: 0.65rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.6px; }
-    .rc-chg { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+    .rc-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: var(--fs-sm); color: var(--text); flex: 1; }
+    .rc-sector { font-size: var(--fs-label); color: var(--text-3); text-transform: uppercase; letter-spacing: 0.6px; }
+    .rc-chg { font-family: 'JetBrains Mono', monospace; font-size: var(--fs-label); font-weight: 700; padding: 2px 8px; border-radius: 100px; }
     .rc-chg.up   { color: var(--bull); background: var(--bull-light); }
     .rc-chg.down { color: var(--bear); background: var(--bear-light); }
-    .rc-catalyst { font-size: 0.75rem; color: var(--text-2); margin-bottom: 6px; line-height: 1.5; }
+    .rc-catalyst { font-size: var(--fs-sm); color: var(--text-2); margin-bottom: 6px; line-height: 1.5; }
     .rc-analysis { display: flex; flex-direction: column; gap: 3px; }
-    .rc-side { font-size: 0.72rem; padding: 4px 8px; border-radius: 6px; }
+    .rc-side { font-size: var(--fs-sm); padding: 4px 8px; border-radius: 6px; }
     .rc-side.bull { background: var(--bull-light); color: var(--bull); }
     .rc-side.bull strong { font-weight: 700; }
     .rc-side.bear { background: var(--bear-light); color: var(--bear); }
     .rc-side.bear strong { font-weight: 700; }
     .rc-gate {
       margin: 12px 20px 16px; padding: 12px 16px; border: 1.5px dashed var(--border);
-      border-radius: var(--radius); text-align: center; font-size: 0.78rem; color: var(--text-2);
+      border-radius: var(--radius); text-align: center; font-size: var(--fs-sm); color: var(--text-2);
       background: var(--alt);
     }
     .rc-gate strong { color: var(--blue); font-weight: 600; }
-    .rc-edu { font-size: 0.62rem; color: var(--text-3); text-align: center; padding: 6px 20px 14px; }
+    .rc-edu { font-size: var(--fs-caption); color: var(--text-3); text-align: center; padding: 6px 20px 14px; }
 
     /* ─── TRUST STRIP ─────────────────────────────────── */
     .trust-strip {
@@ -357,13 +361,13 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     }
     .trust-item {
       display: flex; align-items: center; gap: 8px;
-      font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.72);
+      font-size: var(--fs-sm); font-weight: 500; color: rgba(255,255,255,0.72);
       justify-content: center; text-align: center;
     }
     .trust-item svg { width: 14px; height: 14px; color: var(--wa); flex-shrink: 0; }
     @media (max-width: 640px) {
       .trust-grid { grid-template-columns: repeat(2,1fr); gap: 10px 12px; }
-      .trust-item { font-size: 0.73rem; justify-content: flex-start; text-align: left; }
+      .trust-item { font-size: var(--fs-sm); justify-content: flex-start; text-align: left; }
     }
 
     /* ─── BRIEF PREVIEW ──────────────────────────────── */
@@ -371,14 +375,14 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .brief-card { padding: 22px; position: relative; }
     .brief-card-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
     .brief-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--text); }
-    .brief-co-name { font-size: 0.72rem; color: var(--text-3); margin-top: 1px; }
-    .brief-sector { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-3); }
-    .brief-chg { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; flex-shrink: 0; }
+    .brief-co-name { font-size: var(--fs-caption); color: var(--text-3); margin-top: 1px; }
+    .brief-sector { font-size: var(--fs-label); font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-3); }
+    .brief-chg { font-family: 'JetBrains Mono', monospace; font-size: var(--fs-sm); font-weight: 700; padding: 3px 9px; border-radius: 100px; flex-shrink: 0; }
     .brief-chg.up   { color: var(--bull); background: var(--bull-light); }
     .brief-chg.down { color: var(--bear); background: var(--bear-light); }
-    .brief-catalyst { font-size: 0.83rem; color: var(--text-2); margin-bottom: 12px; line-height: 1.55; }
+    .brief-catalyst { font-size: var(--fs-sm); color: var(--text-2); margin-bottom: 12px; line-height: 1.55; }
     .brief-pills { display: flex; gap: 6px; flex-wrap: wrap; }
-    .brief-pill { font-size: 0.65rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; border: 1px solid; letter-spacing: 0.5px; text-transform: uppercase; }
+    .brief-pill { font-size: var(--fs-label); font-weight: 700; padding: 3px 9px; border-radius: 100px; border: 1px solid; letter-spacing: 0.5px; text-transform: uppercase; }
     .pill-bull  { color: var(--bull); border-color: rgba(22,131,74,0.25); background: var(--bull-light); }
     .pill-bear  { color: var(--bear); border-color: rgba(196,61,61,0.25); background: var(--bear-light); }
     .pill-risk  { color: var(--amber); border-color: rgba(180,83,9,0.25); background: var(--amber-light); }
@@ -389,13 +393,13 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       background: rgba(248,250,252,0.85); backdrop-filter: blur(4px);
     }
     .brief-lock-overlay svg { color: var(--blue); }
-    .brief-lock-overlay span { font-size: 0.8rem; font-weight: 600; color: var(--blue); }
+    .brief-lock-overlay span { font-size: var(--fs-sm); font-weight: 600; color: var(--blue); }
     .brief-gate {
       margin-top: 36px; padding: 24px 28px; background: var(--blue-light);
       border: 1.5px dashed rgba(37,99,235,0.3); border-radius: var(--radius-lg);
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px;
     }
-    .brief-gate p { font-size: 0.92rem; color: var(--text-2); max-width: 460px; }
+    .brief-gate p { font-size: var(--fs-body); color: var(--text-2); max-width: 460px; }
     .brief-gate strong { color: var(--text); }
     @media (max-width: 860px) { .brief-grid { grid-template-columns: 1fr; } }
 
@@ -405,18 +409,18 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .bb-card.bull { background: var(--bull-light); border-color: rgba(22,131,74,0.25); }
     .bb-card.bear { background: var(--bear-light); border-color: rgba(196,61,61,0.25); }
     .bb-label {
-      display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.88rem;
+      display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: var(--fs-body);
       margin-bottom: 16px;
     }
     .bb-card.bull .bb-label { color: var(--bull); }
     .bb-card.bear .bb-label { color: var(--bear); }
     .bb-label svg { width: 18px; height: 18px; flex-shrink: 0; }
     .bb-items { display: flex; flex-direction: column; gap: 10px; }
-    .bb-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.86rem; color: var(--text-2); line-height: 1.5; }
+    .bb-item { display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-sm); color: var(--text-2); line-height: 1.5; }
     .bb-item svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; }
     .bb-card.bull .bb-item svg { color: var(--bull); }
     .bb-card.bear .bb-item svg { color: var(--bear); }
-    .bb-caption { margin-top: 24px; padding: 14px 16px; background: rgba(255,255,255,0.7); border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--text-2); text-align: center; line-height: 1.6; border: 1px solid rgba(0,0,0,0.06); }
+    .bb-caption { margin-top: 24px; padding: 14px 16px; background: rgba(255,255,255,0.7); border-radius: var(--radius-sm); font-size: var(--fs-sm); color: var(--text-2); text-align: center; line-height: 1.6; border: 1px solid rgba(0,0,0,0.06); }
     @media (max-width: 640px) { .bb-grid { grid-template-columns: 1fr; } }
 
     /* ─── HOW IT WORKS ───────────────────────────────── */
@@ -433,14 +437,14 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       line-height: 1; padding-top: 3px; transition: opacity 0.25s;
     }
     .hiw-step:hover .hiw-num { opacity: 0.85; }
-    .hiw-body h4 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-    .hiw-body p { font-size: 0.86rem; color: var(--text-2); line-height: 1.65; }
+    .hiw-body h4 { font-family: 'Lora', serif; font-size: 1.0625rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .hiw-body p { font-size: var(--fs-body); color: var(--text-2); line-height: 1.65; }
 
     /* Message mockup */
     /* ─── WhatsApp-style mockup ──────────────────────── */
     .msg-mockup {
       border-radius: var(--radius-xl); overflow: hidden;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.22); max-width: 300px; margin: 0 auto;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.22); max-width: 320px; margin: 0 auto;
       position: sticky; top: 84px; background: #fff;
     }
     /* WA header — green bar */
@@ -451,41 +455,41 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .msg-avatar {
       width: 32px; height: 32px; border-radius: 50%; background: #25D366;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Lora', serif; font-weight: 700; font-size: 0.72rem; color: #fff; flex-shrink: 0;
+      font-family: 'Lora', serif; font-weight: 700; font-size: var(--fs-label); color: #fff; flex-shrink: 0;
     }
-    .msg-name { font-weight: 700; font-size: 0.8rem; color: #fff; }
-    .msg-status { font-size: 0.58rem; color: rgba(255,255,255,0.65); margin-top: 1px; }
+    .msg-name { font-weight: 700; font-size: var(--fs-sm); color: #fff; }
+    .msg-status { font-size: var(--fs-label); color: rgba(255,255,255,0.65); margin-top: 1px; }
     /* WA chat wallpaper */
     .msg-body {
       padding: 10px 10px 8px; display: flex; flex-direction: column; gap: 6px;
       background: #E5DDD5 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b2bbb5' fill-opacity='0.12'%3E%3Cpath d='M30 30c0-11 9-20 20-20v2c-9.9 0-18 8.1-18 18s8.1 18 18 18v2c-11 0-20-9-20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
     .msg-time-chip {
-      font-size: 0.56rem; color: rgba(0,0,0,0.45); text-align: center;
+      font-size: var(--fs-label); color: rgba(0,0,0,0.45); text-align: center;
       background: rgba(255,255,255,0.75); border-radius: 100px; padding: 2px 9px;
       margin: 0 auto; width: fit-content;
     }
     /* Chat bubble — white card, left-aligned (incoming) */
     .msg-bubble {
       background: #fff; border-radius: 10px;
-      padding: 8px 10px; font-size: 0.67rem; line-height: 1.6;
+      padding: 8px 10px; font-size: var(--fs-caption); line-height: 1.6;
       color: #111; max-width: 240px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.12);
     }
-    .msg-bubble .mb-head { font-weight: 700; color: #075E54; margin-bottom: 5px; font-size: 0.68rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px; }
-    .msg-bubble .mb-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #111; font-size: 0.78rem; }
-    .msg-bubble .mb-chg { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700; }
+    .msg-bubble .mb-head { font-weight: 700; color: #075E54; margin-bottom: 5px; font-size: var(--fs-caption); border-bottom: 1px solid #f0f0f0; padding-bottom: 4px; }
+    .msg-bubble .mb-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #111; font-size: var(--fs-sm); }
+    .msg-bubble .mb-chg { font-family: 'JetBrains Mono', monospace; font-size: var(--fs-caption); font-weight: 700; }
     .msg-bubble .mb-chg.pos { color: #16a34a; }
     .msg-bubble .mb-chg.neg { color: #dc2626; }
     .msg-bubble .mb-bull { color: #16a34a; margin-top: 5px; }
     .msg-bubble .mb-bear { color: #dc2626; margin-top: 2px; }
-    .msg-bubble .mb-risk { color: #b45309; margin-top: 2px; font-size: 0.63rem; }
+    .msg-bubble .mb-risk { color: #b45309; margin-top: 2px; font-size: var(--fs-caption); }
     .msg-bubble .mb-divider { border: none; border-top: 1px solid #f0f0f0; margin: 5px 0; }
-    .msg-bubble .mb-edu { margin-top: 5px; font-size: 0.59rem; color: #999; }
-    .msg-time { font-size: 0.55rem; color: #999; text-align: right; margin-top: 3px; }
+    .msg-bubble .mb-edu { margin-top: 5px; font-size: var(--fs-label); color: #999; }
+    .msg-time { font-size: var(--fs-label); color: #999; text-align: right; margin-top: 3px; }
     /* WA footer bar (input bar) */
     .msg-footer { background: #f0f0f0; padding: 8px 12px; display: flex; align-items: center; gap: 8px; border-top: 1px solid #ddd; }
-    .msg-footer-input { flex: 1; background: #fff; border-radius: 20px; padding: 5px 10px; font-size: 0.6rem; color: #aaa; border: none; }
+    .msg-footer-input { flex: 1; background: #fff; border-radius: 20px; padding: 5px 10px; font-size: var(--fs-label); color: #aaa; border: none; }
     .msg-footer-mic { width: 28px; height: 28px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .msg-footer-mic svg { width: 13px; height: 13px; color: #fff; }
 
@@ -502,11 +506,11 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       gap: 10px; padding: 13px 22px; align-items: center;
     }
     .sb-head {
-      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px;
+      font-size: var(--fs-label); font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px;
       color: #5B6B82; background: #F1F5FB; border-bottom: 1px solid #D7E0EC;
     }
     .sb-row {
-      font-size: 0.84rem; color: var(--text-2);
+      font-size: var(--fs-sm); color: var(--text-2);
       border-bottom: 1px solid #E8EEF6; background: #fff;
       transition: background 0.15s;
     }
@@ -516,25 +520,25 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .sb-tick {
       display: inline-flex; align-items: center; justify-content: center;
       min-width: 58px; padding: 4px 8px; border-radius: 6px;
-      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: var(--fs-sm);
       color: var(--blue-dark); background: #E8F0FE; border: 1px solid #D0DFFA;
     }
-    .sb-date, .sb-price { font-size: 0.82rem; color: #4A5A70; }
+    .sb-date, .sb-price { font-size: var(--fs-sm); color: #4A5A70; }
     .sb-price { font-family: 'JetBrains Mono', monospace; }
     .sb-up, .sb-down {
       display: inline-flex; align-items: center; justify-content: center;
       min-width: 64px; padding: 3px 8px; border-radius: 100px;
-      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: var(--fs-sm);
     }
     .sb-up   { color: #0F6B3A; background: #DCFCE7; }
     .sb-down { color: #B42318; background: #FEE4E2; }
-    .sb-muted { color: #8A97A8; font-style: italic; font-size: 0.78rem; }
-    .sb-badge { display: inline-flex; align-items: center; font-size: 0.68rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; border: 1px solid; }
+    .sb-muted { color: #8A97A8; font-style: italic; font-size: var(--fs-sm); }
+    .sb-badge { display: inline-flex; align-items: center; font-size: var(--fs-label); font-weight: 700; padding: 3px 9px; border-radius: 100px; border: 1px solid; }
     .sb-badge.tracked { color: #0F6B3A; border-color: rgba(15,107,58,0.22); background: #DCFCE7; }
     .sb-badge.moved-lower { color: #B42318; border-color: rgba(180,35,24,0.22); background: #FEE4E2; }
     .sb-badge.pending  { color: #35507A; border-color: rgba(53,80,122,0.2); background: #E8F0FE; }
     .sb-badge.illus    { color: var(--amber); border-color: rgba(180,83,9,0.25); background: var(--amber-light); }
-    .sb-note { margin-top: 16px; font-size: 0.76rem; color: var(--text-3); line-height: 1.7; text-align: center; }
+    .sb-note { margin-top: 16px; font-size: var(--fs-caption); color: var(--text-3); line-height: 1.7; text-align: center; }
 
     /* Scoreboard dark section + light table panel */
     #scoreboard { background: var(--blue-dark); }
@@ -558,11 +562,11 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
     }
     .sector-icon svg { width: 20px; height: 20px; color: var(--blue); }
-    .sector-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
-    .sector-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.55; }
+    .sector-card h4 { font-size: var(--fs-body); font-weight: 700; color: var(--text); margin-bottom: 5px; }
+    .sector-card p { font-size: var(--fs-sm); color: var(--text-2); line-height: 1.55; }
     .sector-tickers { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
     .sector-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace; font-size: var(--fs-label); font-weight: 700;
       color: var(--text-2); background: var(--alt); border: 1px solid var(--border);
       padding: 2px 7px; border-radius: 4px;
     }
@@ -577,8 +581,8 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
       color: var(--blue); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
     }
     .edu-icon svg { width: 20px; height: 20px; }
-    .edu-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-    .edu-card p  { font-size: 0.84rem; color: var(--text-2); line-height: 1.65; }
+    .edu-card h4 { font-size: var(--fs-body); font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .edu-card p  { font-size: var(--fs-sm); color: var(--text-2); line-height: 1.65; }
     @media (max-width: 800px) { .edu-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 520px)  { .edu-grid { grid-template-columns: 1fr; } }
 
@@ -594,9 +598,9 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     }
     .final-cta-inner { max-width: 620px; margin: 0 auto; position: relative; z-index: 1; }
     .final-cta h2 { font-family: 'Lora', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 14px; }
-    .final-cta p { font-size: 0.96rem; color: rgba(255,255,255,0.62); line-height: 1.75; margin-bottom: 36px; }
+    .final-cta p { font-size: var(--fs-body); color: rgba(255,255,255,0.62); line-height: 1.75; margin-bottom: 36px; }
     .cta-reassurance { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-    .cta-reassurance span { display: flex; align-items: center; gap: 5px; font-size: 0.78rem; color: rgba(255,255,255,0.48); }
+    .cta-reassurance span { display: flex; align-items: center; gap: 5px; font-size: var(--fs-sm); color: rgba(255,255,255,0.48); }
     .cta-reassurance svg { width: 13px; height: 13px; color: rgba(37,211,102,0.7); }
 
     /* ─── FAQ ────────────────────────────────────────── */
@@ -604,7 +608,7 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .faq-item { border-bottom: 1px solid var(--border); }
     .faq-q {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 17px 0; cursor: pointer; font-size: 0.94rem; font-weight: 600;
+      padding: 17px 0; cursor: pointer; font-size: var(--fs-body); font-weight: 600;
       font-family: inherit; color: var(--text); transition: color 0.15s; gap: 12px;
       background: none; border: none; width: 100%; text-align: left;
     }
@@ -612,15 +616,15 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .faq-q:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 3px; }
     .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.28s; color: var(--text-3); }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-a { max-height: 0; overflow: hidden; font-size: 0.88rem; color: var(--text-2); line-height: 1.75; transition: max-height 0.32s ease, padding 0.22s; }
+    .faq-a { max-height: 0; overflow: hidden; font-size: var(--fs-body); color: var(--text-2); line-height: 1.75; transition: max-height 0.32s ease, padding 0.22s; }
     .faq-item.open .faq-a { max-height: 500px; padding-bottom: 16px; }
     .faq-a a { color: var(--blue); text-underline-offset: 2px; }
 
     /* ─── DISCLOSURE ─────────────────────────────────── */
     .disc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; max-width: 1060px; margin-left: auto; margin-right: auto; }
     .disc-item { padding: 18px 20px; }
-    .disc-q { font-size: 0.82rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-    .disc-a { font-size: 0.8rem; color: var(--text-2); line-height: 1.7; }
+    .disc-q { font-size: var(--fs-body); font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .disc-a { font-size: var(--fs-body); color: var(--text-2); line-height: 1.7; }
     .disc-a a { color: var(--blue); text-underline-offset: 2px; }
     .disc-full { grid-column: 1 / -1; border: 1.5px solid rgba(180,83,9,0.2) !important; }
     /* .disc-verify removed */
@@ -633,9 +637,8 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .sr-only { position: absolute; left: -9999px; }
   </style>
 
-  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260804-2">
-  <script src="assets/whatsapp-popup.js?v=20260804-2" defer></script>
-  <script src="https://www.chatfromforms.com/form-embed.js?v=0.1" defer></script>
+  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260820-2">
+  <script src="assets/whatsapp-popup.js?v=20260820-2" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -719,10 +722,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
 
       <div class="hero-ctas">
-        <button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"
-        onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp"> 
+        <a id="waf1" class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('hero_wa_cta')" aria-label="Get the brief on WhatsApp">
           <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
-        </button>
+        </a>
         <a href="#watchlist" class="btn btn-outline">Preview Today's Brief</a>
       </div>
 
@@ -881,10 +883,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="brief-gate reveal">
       <p>The complete brief on all three names is published in the group at 9:00 AM ET every trading day.</p>
-      <button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"
-      onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp"> 
+      <a id="waf1" class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('brief_wa_cta')" aria-label="Get the brief on WhatsApp">
         <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
-      </button>
+      </a>
     </div>
   </div>
 </section>
@@ -950,7 +951,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="mb-ticker">NVDA</span>
                 <span class="mb-chg pos">▲ +3.2%</span>
               </div>
-              <div style="font-size:0.62rem;color:#555;margin-bottom:4px;">Semiconductors · Pre-market</div>
+              <div style="font-size:0.8125rem;color:#555;margin-bottom:4px;">Semiconductors · Pre-market</div>
               <div class="mb-bull">🟢 <strong>Bull:</strong> Blackwell GPU backlog; hyperscaler capex rising.</div>
               <div class="mb-bear">🔴 <strong>Bear:</strong> Valuation prices in near-perfect execution.</div>
               <div class="mb-risk">⚠️ <strong>Risk:</strong> Margin compression on high expectations.</div>
@@ -984,7 +985,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="sb-h2" class="section-title centered reveal">Check the ideas after they publish.</h2>
     <p class="section-sub centered reveal" style="margin-left:auto;margin-right:auto;margin-bottom:32px;">Reference prices, later movement, and S&amp;P 500 comparison for educational tracking. Positive and negative outcomes both stay visible. This is not investment performance reporting.</p>
 
-    <p style="font-size:0.78rem;color:var(--text-3);margin-bottom:16px;text-align:center;">Selected ideas from July onward. Reference prices recorded at 9:00 AM ET. For educational tracking only, not a daily archive of every brief.</p>
+    <p style="font-size:0.8125rem;color:var(--text-3);margin-bottom:16px;text-align:center;">Selected ideas from July onward. Reference prices recorded at 9:00 AM ET. For educational tracking only, not a daily archive of every brief.</p>
 
     <div class="card reveal sb-wrap">
       <div class="sb-table-wrap">
@@ -1123,10 +1124,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <h2 id="final-cta-h2" class="reveal">The daily pre-market research brief.</h2>
     <p class="reveal">Published at 9:00 AM ET each trading day, 30 minutes before the NYSE open.</p>
-    <button class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer" data-hz-whatsapp-cta aria-haspopup="dialog"
-    onclick="typeof tdw!==\'undefined\'&&tdw.track(\'nav_wa_cta\')" aria-label="Get the brief on WhatsApp"> 
+    <a id="waf1" class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('final_wa_cta')" aria-label="Get the brief on WhatsApp">
       <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
-    </button>
+    </a>
     <div class="cta-reassurance reveal">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No credit card</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No deposit</span>
@@ -1170,7 +1170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="card disc-item disc-full reveal">
         <div class="disc-q">Risk notice</div>
-        <div class="disc-a">Investing involves risk, including possible loss of principal. Past price movements are for context only. They are not indicative of future results. Nothing here is a solicitation or recommendation to buy or sell any security. Always consult a licensed financial professional. See our <a href="/terms-of-use">Terms of Use</a> and <a href="/privacy-policy">Privacy Policy</a>.</div>
+        <div class="disc-a">Investing involves risk, including possible loss of principal. Past price movements are for context only. They are not indicative of future results. Nothing here is a solicitation or recommendation to buy or sell any security. Always consult a licensed financial professional. See our <a href="terms-of-use.html">Terms of Use</a> and <a href="privacy-policy.html">Privacy Policy</a>.</div>
       </div>
     </div>
   </div>
@@ -1182,11 +1182,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─── SCRIPTS ────────────────────────────────────────── -->
 <script>
 /* ─── CONFIGURATION ───────────────────────────────────────
- * Single source of truth for the WhatsApp number.
- * Replace REPLACE_WHATSAPP_NUMBER with the actual number (e.g. 12025551234).
+ * WhatsApp join link uses the same number as the Get the Brief CTAs.
  */
 var CFG = {
-  WA:     'REPLACE_WHATSAPP_NUMBER',
+  WA:     '17202322867',
   WORKER: 'https://daily-watchlist-ideas.rlockman.workers.dev'
   // NOTE: No Finnhub API key here. All market data must route via the Worker.
   // API key is stored as a Cloudflare Worker secret (wrangler secret put FINNHUB_KEY).
@@ -1418,6 +1417,6 @@ function renderScoreboard(history) {
   </defs>
 </svg>
 
-<script src="components.js"></script>
+<script src="components.js?v=20260820-4"></script>
 </body>
 </html>
