@@ -252,7 +252,7 @@
       font-size: var(--fs-label); font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
       color: var(--blue);
     }
-    .hero-label span { display: inline-block; width: 5px; height: 5px; background: var(--blue); border-radius: 50%; animation: blink-green 2s ease-in-out infinite; }
+    .hero-label span { display: inline-block; width: 5px; height: 5px; background: var(--wa); border-radius: 50%; animation: blink-green 2s ease-in-out infinite; }
     .hero h1 {
       font-family: 'Lora', serif; font-size: clamp(2.1rem, 4vw, 3.2rem);
       font-weight: 700; line-height: 1.18; color: var(--text); margin-bottom: 20px;
@@ -694,7 +694,7 @@
       </ul>
 
       <div class="hero-ctas">
-        <a class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('hero_wa_cta')" aria-label="Get the brief on WhatsApp">
+        <a id="waf1" class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('hero_wa_cta')" aria-label="Get the brief on WhatsApp">
           <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
         </a>
         <a href="#watchlist" class="btn btn-outline">Preview Today's Brief</a>
@@ -855,7 +855,7 @@
 
     <div class="brief-gate reveal">
       <p>The complete brief on all three names is published in the group at 9:00 AM ET every trading day.</p>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('brief_wa_cta')" aria-label="Get the brief on WhatsApp">
+      <a id="waf1" class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('brief_wa_cta')" aria-label="Get the brief on WhatsApp">
         <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
       </a>
     </div>
@@ -1096,7 +1096,7 @@
     </div>
     <h2 id="final-cta-h2" class="reveal">The daily pre-market research brief.</h2>
     <p class="reveal">Published at 9:00 AM ET each trading day, 30 minutes before the NYSE open.</p>
-    <a class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('final_wa_cta')" aria-label="Get the brief on WhatsApp">
+    <a id="waf1" class="btn btn-wa btn-sm" href="https://wa.me/17202322867?text=Hi%2C%20I%27d%20like%20to%20join%20the%20free%20The%20Daily%20Watchlist%20daily%20market%20analysis%20group." target="_blank" rel="noopener noreferrer" onclick="typeof tdw!=='undefined'&&tdw.track('final_wa_cta')" aria-label="Get the brief on WhatsApp">
       <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
     </a>
     <div class="cta-reassurance reveal">
@@ -1389,6 +1389,6 @@ function renderScoreboard(history) {
   </defs>
 </svg>
 
-<script src="components.js?v=20260820-3"></script>
+<script src="components.js?v=20260820-4"></script>
 </body>
 </html>
