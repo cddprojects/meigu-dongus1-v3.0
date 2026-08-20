@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var WA_HREF = 'https://wa.me/14102580713?text=' + encodeURIComponent(
+  var WA_HREF = 'https://wa.me/17202322867?text=' + encodeURIComponent(
     "Hi, I'd like to join the free The Daily Watchlist daily market analysis group."
   );
 
@@ -99,12 +99,13 @@
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 36px; max-width: 1200px; margin: 0 auto 44px; padding: 0 5%; }\
     .footer-brand { font-family: "Lora", Georgia, serif; font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; display:flex; align-items: center; gap: 12px;}\
     .footer-brand-desc { font-size: 0.875rem; color: rgba(255,255,255,0.68); line-height: 1.7; max-width: 240px; }\
+    @media (max-width: 640px) { .footer-brand-desc { font-size: 0.875rem; } }\
     .footer-col h5 { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 14px; }\
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; margin: 0; padding: 0; }\
     .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.15s; }\
     .footer-col a:hover { color: #fff; }\
     .footer-divider { max-width: 1200px; margin: 0 auto 24px; padding: 0 5%; border: none; border-top: 1px solid rgba(255,255,255,0.14); }\
-    .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 0 5%; font-size: 0.8125rem; color: rgba(255,255,255,0.55); line-height: 1.75; }\
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 0 5%; font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.75; }\
     .footer-bottom a { color: rgba(255,255,255,0.7); text-decoration: none; }\
     .footer-bottom a:hover { color: #fff; }\
     @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }\
