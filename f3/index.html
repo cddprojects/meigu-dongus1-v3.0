@@ -15,23 +15,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MDT86V3J');</script>
 <!-- End Google Tag Manager -->
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1583511610116562');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
   <meta name="description" content="Review structured US pre-market research at 9:00 AM ET, including public catalysts, balanced bull and bear perspectives, key risks, and educational market context." />
   <link rel="canonical" href="https://thedailywatchlist.com/" />
 
@@ -637,8 +621,8 @@ src="https://www.facebook.com/tr?id=1583511610116562&ev=PageView&noscript=1"
     .sr-only { position: absolute; left: -9999px; }
   </style>
 
-  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260820-2">
-  <script src="assets/whatsapp-popup.js?v=202608202-1" defer></script>
+  <link rel="stylesheet" href="/f3/assets/whatsapp-popup.css?v=20260820-2">
+  <script src="/f3/assets/whatsapp-popup.js?v=20260821-1" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -722,7 +706,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
 
       <div class="hero-ctas">
-        <a id="waf1" class="btn btn-wa btn-sm" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-wa btn-sm" href="/f3/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">
           <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
         </a>
         <a href="#watchlist" class="btn btn-outline">Preview Today's Brief</a>
@@ -883,7 +867,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="brief-gate reveal">
       <p>The complete brief on all three names is published in the group at 9:00 AM ET every trading day.</p>
-      <a id="waf1" class="btn btn-wa btn-sm" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-wa btn-sm" href="/f3/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer"">
         <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
       </a>
     </div>
@@ -1124,7 +1108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <h2 id="final-cta-h2" class="reveal">The daily pre-market research brief.</h2>
     <p class="reveal">Published at 9:00 AM ET each trading day, 30 minutes before the NYSE open.</p>
-    <a id="waf1" class="btn btn-wa btn-sm" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">
+    <a class="btn btn-wa btn-sm" href="/f3/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">
       <svg class="wa-icon" aria-hidden="true"><use href="#icon-wa"/></svg>Get the Brief
     </a>
     <div class="cta-reassurance reveal">
@@ -1417,39 +1401,52 @@ function renderScoreboard(history) {
   </defs>
 </svg>
 
-<script src="/components.js?v=20260822-1"></script>
-		<script>
+<script src="components.js?v=20260820-4"></script>
+<script>
 (function () {
 
     const params =
-        new URLSearchParams(window.location.search);
+        new URLSearchParams(
+            window.location.search
+        );
 
-    fetch('/api/track-visitor.php', {
 
-        method: 'POST',
+    fetch(
+        '/f3/api/track-visitor.php',
+        {
 
-        credentials: 'same-origin',
+            method: 'POST',
 
-        headers: {
-            'Content-Type': 'application/json'
-        },
+            credentials: 'same-origin',
 
-        keepalive: true,
+            headers: {
+                'Content-Type': 'application/json'
+            },
 
-        body: JSON.stringify({
+            keepalive: true,
 
-            page_url: window.location.href,
+            body: JSON.stringify({
 
-            referrer: document.referrer || null,
+                page_url:
+                    window.location.href,
 
-            utm_source: params.get('utm_source'),
+                referrer:
+                    document.referrer || null,
 
-            utm_medium: params.get('utm_medium'),
+                utm_source:
+                    params.get('utm_source'),
 
-            utm_campaign: params.get('utm_campaign')
-        })
+                utm_medium:
+                    params.get('utm_medium'),
 
-    }).catch(function () {});
+                utm_campaign:
+                    params.get('utm_campaign')
+
+            })
+
+        }
+    )
+    .catch(function () {});
 
 })();
 </script>

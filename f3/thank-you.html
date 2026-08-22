@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>You're In | The Daily Watchlist</title>
+  <meta name="description" content="You're in. The Daily Watchlist morning brief publishes at 9:00 AM ET every trading day." />
+  <link rel="canonical" href="https://thedailywatchlist.com/thank-you" />
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%231E3A5F'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='26' fill='%23F59E0B'>DW</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #FFFFFF;
+      --text:       #172033;
+      --text-2:     #5D6678;
+      --text-3:     #94A3B8;
+      --border:     #E2E8F0;
+      --blue:       #2563EB;
+      --blue-dark:  #1E3A5F;
+      --blue-light: #EFF6FF;
+      --wa:         #25D366;
+      --wa-dark:    #128C7E;
+      --bull:       #16834A;
+      --radius:     12px;
+      --radius-lg:  18px;
+      --shadow:     0 4px 16px rgba(23,32,51,0.08), 0 2px 4px rgba(23,32,51,0.04);
+    }
+
+    html { font-size: 16px; background: #fff; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 1rem;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2 { font-family: 'Lora', serif; }
+
+    .ty {
+      flex: 1;
+      background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 70%);
+      padding: 72px 5% 64px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ty-inner {
+      width: 100%; max-width: 560px; text-align: center;
+    }
+
+    .ty-check {
+      width: 64px; height: 64px; margin: 0 auto 22px;
+      border-radius: 50%;
+      background: #DCFCE7;
+      border: 1.5px solid rgba(22,131,74,0.22);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--bull);
+      animation: pop 0.45s ease both;
+    }
+    .ty-check svg { width: 28px; height: 28px; }
+    @keyframes pop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .ty-label {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
+      color: var(--bull); background: #DCFCE7; border: 1px solid rgba(22,131,74,0.2);
+      padding: 5px 12px; border-radius: 100px; margin-bottom: 18px;
+    }
+    .ty-label .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--bull);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+      font-weight: 700; line-height: 1.2; color: var(--text);
+      margin-bottom: 14px;
+    }
+    .ty-sub {
+      font-size: 1.02rem; color: var(--text-2); line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .ty-sub strong { color: var(--text); font-weight: 600; }
+
+    .ty-next {
+      text-align: left;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 26px 28px;
+      margin-bottom: 28px;
+    }
+    .ty-next h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--text-3); margin-bottom: 18px;
+    }
+    .ty-step {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .ty-step:first-of-type { padding-top: 0; }
+    .ty-step:last-child { border-bottom: none; padding-bottom: 0; }
+    .ty-num {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--blue-light); color: var(--blue);
+      border: 1px solid rgba(37,99,235,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700;
+    }
+    .ty-step strong {
+      display: block; font-size: 1rem; font-weight: 700; color: var(--text);
+      margin-bottom: 3px;
+    }
+    .ty-step p {
+      font-size: 0.875rem; color: var(--text-2); line-height: 1.55;
+    }
+
+    .ty-actions {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+      margin-bottom: 22px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 600;
+      text-decoration: none; transition: all 0.18s ease;
+    }
+    .btn-wa {
+      background: var(--wa); color: #fff;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.3);
+    }
+    .btn-wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; color: var(--text); border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+    .wa-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .ty-note {
+      font-size: 0.8125rem; color: var(--text-3); line-height: 1.6;
+    }
+
+    @media (max-width: 540px) {
+      .ty { padding: 48px 5% 48px; }
+      .ty-next { padding: 22px 18px; }
+      .ty-actions { flex-direction: column; }
+      .btn { justify-content: center; width: 100%; }
+    }
+  </style>
+
+  <link rel="stylesheet" href="/f3/assets/whatsapp-popup.css?v=20260820-2">
+  <script src="/f3/assets/whatsapp-popup.js?v=20260821-1" defer></script>
+</head>
+<body>
+
+  <div id="g-nav"></div>
+
+  <main class="ty" aria-labelledby="ty-h1">
+    <div class="ty-inner">
+
+      <div class="ty-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+
+      <div class="ty-label"><span class="dot" aria-hidden="true"></span>Confirmed</div>
+
+      <h1 id="ty-h1">You're in.</h1>
+      <p class="ty-sub">
+        The morning brief publishes at <strong>9:00 AM ET</strong> every trading day,
+        30 minutes before the NYSE open. Educational research only. Not investment advice.
+      </p>
+
+      <div class="ty-next">
+        <h2>What happens next</h2>
+        <div class="ty-step">
+          <div class="ty-num" aria-hidden="true">1</div>
+          <div>
+            <strong>Watch for the 9:00 AM ET brief</strong>
+            <p>Each trading day: 2–3 US stocks with a public catalyst, the case for the move, and the case against it.</p>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-num" aria-hidden="true">2</div>
+          <div>
+            <strong>Leave anytime</strong>
+            <p>No card, no deposit, nothing to cancel. Exit the WhatsApp group whenever you want.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ty-actions">
+        <a href="/" class="btn btn-outline">Back to Home</a>
+      </div>
+
+      <p class="ty-note">Educational content only. Not a recommendation to buy or sell any security.</p>
+    </div>
+  </main>
+
+  <div id="g-footer"></div>
+  <script src="components.js?v=20260820-4"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Cloudflare Pages / Netlify style redirects
+# Clean URLs after go-live
+
+# Pretty URL → file (rewrite, keep clean path in browser)
+/thank-you           /thank-you.html           200
+/privacy-policy      /privacy-policy.html      200
+/terms-of-use        /terms-of-use.html        200
+
+# Old .html URLs → clean URLs (301 permanent)
+/index.html          /                         301
+/thank-you.html      /thank-you                301
+/privacy-policy.html /privacy-policy           301
+/terms-of-use.html   /terms-of-use             301

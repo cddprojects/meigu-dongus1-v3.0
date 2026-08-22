@@ -14,7 +14,7 @@
   |
   */
 
-  var WA_HREF = "/api/go-whatsapp.php";
+  var WA_HREF = "/f3/api/go-whatsapp.php";
 
 
   /*
